@@ -47,7 +47,6 @@ namespace WpfApp1
                 MySqlCommand userCommand = new MySqlCommand(request, databaseCon);
                 MySqlDataReader reader = userCommand.ExecuteReader();
                 data.Load(reader);
-                Console.WriteLine("Dasdsadsa");
                 return data;
             }
             return new DataTable();   //Nie powiodlo sie

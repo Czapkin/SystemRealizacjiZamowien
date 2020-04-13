@@ -14,21 +14,39 @@ namespace WpfApp1
             InitializeComponent();
 
             MySqlConnector mysql = new MySqlConnector
-                  ("SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=WASZEHASLO;");
+                  ("SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=HASLO");
             DataTable n1 = new DataTable();
-            n1 = mysql.sendRequest("SELECT * from tb_sets");
+            n1 = mysql.sendRequest("SELECT * from tb_beverages");
+
+            var WholeProduct = new List<string>();
 
             foreach (DataRow dbRow in n1.Rows)
             {
                 foreach (DataColumn dbColumns in n1.Columns)
                 {
                     var field1 = dbRow[dbColumns].ToString();
-                    Console.WriteLine(field1);
+                    //Console.WriteLine(field1);
+                    WholeProduct.Add(field1);
                 }
             }
-            
-            var name = new List<string>()
+
+            var productName = new List<string>();
+
+            for (int i = 1; i <= WholeProduct.Count; i += 7)
             {
+                productName.Add((WholeProduct[i]));
+            }
+
+            var productCost = new List<string>();
+
+            for(int i = 5; i <= WholeProduct.Count; i += 7)
+            {
+                productCost.Add(WholeProduct[i]);
+            }
+
+
+            var name = productName;  //new List<string>()
+            /*{
                 "Ham",
                 "Cheese",
                 "NugBg",
@@ -36,9 +54,9 @@ namespace WpfApp1
                 "ChiCheese",
                 "dasdsadsa",
             };
-
-            var price = new List<string>()
-            {
+            */
+            var price = productCost;
+            /*{
                 "5",
                 "10",
                 "15",
@@ -46,7 +64,7 @@ namespace WpfApp1
                 "25",
                 "33",
             };
-
+            */
             for(int i=0; i<name.Count; i++)
             {
                 Class1 button = new Class1(name[i], price[i])
