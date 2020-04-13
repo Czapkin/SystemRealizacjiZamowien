@@ -16,7 +16,17 @@ namespace WpfApp1
             MySqlConnector mysql = new MySqlConnector
                   ("SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=HASLO");
             DataTable n1 = new DataTable();
+            DataTable n2 = new DataTable();
+            DataTable n3 = new DataTable();
+            DataTable n4 = new DataTable();
+            DataTable n5 = new DataTable();
+
             n1 = mysql.sendRequest("SELECT * from tb_beverages");
+            n2 = mysql.sendRequest("SELECT * from tb_desserts");
+            n3 = mysql.sendRequest("SELECT * from tb_sandwiches");
+            n4 = mysql.sendRequest("SELECT * from tb_sets");
+            n5 = mysql.sendRequest("SELECT * from tb_snacks");
+
 
             var WholeProduct = new List<string>();
 
@@ -29,6 +39,48 @@ namespace WpfApp1
                     WholeProduct.Add(field1);
                 }
             }
+
+            foreach (DataRow dbRow in n2.Rows)
+            {
+                foreach (DataColumn dbColumns in n2.Columns)
+                {
+                    var field1 = dbRow[dbColumns].ToString();
+                    //Console.WriteLine(field1);
+                    WholeProduct.Add(field1);
+                }
+            }
+
+            foreach (DataRow dbRow in n3.Rows)
+            {
+                foreach (DataColumn dbColumns in n3.Columns)
+                {
+                    var field1 = dbRow[dbColumns].ToString();
+                    //Console.WriteLine(field1);
+                    WholeProduct.Add(field1);
+                }
+            }
+
+            foreach (DataRow dbRow in n4.Rows)
+            {
+                foreach (DataColumn dbColumns in n4.Columns)
+                {
+                    var field1 = dbRow[dbColumns].ToString();
+                    //Console.WriteLine(field1);
+                    WholeProduct.Add(field1);
+                }
+            }
+
+            foreach (DataRow dbRow in n5.Rows)
+            {
+                foreach (DataColumn dbColumns in n5.Columns)
+                {
+                    var field1 = dbRow[dbColumns].ToString();
+                    //Console.WriteLine(field1);
+                    WholeProduct.Add(field1);
+                }
+            }
+
+
 
             var productName = new List<string>();
 
