@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 /// 
 /// KLASA DO OBSLUGI ZAPYTAN MYSQL 
-/// MACIEJ M
+/// MACIEJ 
 
 namespace WpfApp1
 {
