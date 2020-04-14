@@ -10,29 +10,9 @@ namespace WpfApp1
 
     public partial class MainWindow : Window
     {
-        public void loopThroughDataT(DataTable element, List<string> lista)
+
+        public MySqlConnector tryToConnectAgain(MySqlConnector mysql,string loginString) // ponowne laczenie z baza
         {
-            foreach (DataRow dbRow in element.Rows)
-            {
-                foreach (DataColumn dbColumns in element.Columns)
-                {
-                    var field1 = dbRow[dbColumns].ToString();
-                    //Console.WriteLine(field1);
-                    lista.Add(field1);
-                }
-            }
-        }
-
-        public MainWindow()
-        {
-            InitializeComponent();
-            string loginString =
-                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=Chuj";
-
-                // TU WYZEJ WPISUJCIE HASLO
-
-            MySqlConnector mysql = new MySqlConnector(loginString);
-
             while (!mysql.isConnected())   // sprawdza czy istnieje polaczenie z baza 
             {
                 MessageBoxResult result = MessageBox.Show("Failed connecting to database\nTry again?", "ERROR"
@@ -52,6 +32,37 @@ namespace WpfApp1
 
                 }
             }
+            return mysql;
+        }
+
+        public void loopThroughDataT(DataTable element, List<string> lista)
+        {
+            foreach (DataRow dbRow in element.Rows)
+            {
+                foreach (DataColumn dbColumns in element.Columns)
+                {
+                    var field1 = dbRow[dbColumns].ToString();
+                    //Console.WriteLine(field1);
+                    lista.Add(field1);
+                }
+            }
+        }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            string loginString =
+                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=dsadas";
+
+                // TU WYZEJ WPISUJCIE HASLO
+
+            MySqlConnector mysql = new MySqlConnector(loginString);
+
+            if (!mysql.isConnected())
+            {
+                mysql = tryToConnectAgain(mysql,loginString);  // Jesli nie nawiazano polaczenia z baza sproboj ponownie
+            }
+
 
                 DataTable n1 = new DataTable();
                 DataTable n2 = new DataTable();
