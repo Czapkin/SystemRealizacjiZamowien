@@ -28,7 +28,7 @@ namespace WpfApp1
             InitializeComponent();
 
             MySqlConnector mysql = new MySqlConnector 
-                  ("SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=WASZEH");
+                  ("SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_12042020;UID=root;PASSWORD=WASZE");
             DataTable n1 = new DataTable();
             DataTable n2 = new DataTable();
             DataTable n3 = new DataTable(); // kontenery dla wynikow zapytan
@@ -51,7 +51,7 @@ namespace WpfApp1
 
             var productName = new List<string>();
 
-            for (int i = 1; i <= WholeProduct.Count; i += 7) // nazwa produktu w bazie danych jest 1 (liczac od 0)
+            for (int i = 1; i <= WholeProduct.Count; i += 7) // nazwa produktu w bazie danych jest pierwsza (liczac od 0)
             {                                                // iterujemy po tablicy ktora zawiera wszystkie elementy bazy 
                 productName.Add((WholeProduct[i]));          // (lacznie 7) dzieki czemu w tej petli dodajemy tylko nazwy produkt.
             }
@@ -65,7 +65,7 @@ namespace WpfApp1
 
 
             var name = productName;   //przypisujemy elementy listy do zmiennych name i price
-            var price =productCost;
+            var price = productCost;
             
             for(int i=0; i<name.Count; i++)
             {
