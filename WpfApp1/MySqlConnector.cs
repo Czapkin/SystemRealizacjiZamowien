@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
+using MySql.Data.MySqlClient;
+using System.Data;
 
+/// 
+/// KLASA DO OBSLUGI ZAPYTAN MYSQL 
+/// MACIEJ M
 
 namespace WpfApp1
 {
-    /*
-    public class MySqlConnector
-    {
+    public class MySqlConnector {
+        
         readonly MySqlConnection databaseCon;
         readonly string inputToConnect;
         static bool connectionIndicator;
@@ -31,19 +34,14 @@ namespace WpfApp1
             }
             finally
             {
-                if (databaseCon != null)
-                {
-                    //databaseCon.Close();
-                    //connectionIndicator = false;
-                }
             }
         }
         public DataTable sendRequest(string request)
         {
-            if(connectionIndicator == true)
+            if (connectionIndicator == true)
             {
                 DataTable data = new DataTable();
-                
+
                 MySqlCommand userCommand = new MySqlCommand(request, databaseCon);
                 MySqlDataReader reader = userCommand.ExecuteReader();
                 data.Load(reader);
@@ -56,24 +54,13 @@ namespace WpfApp1
             if (connectionIndicator == true) return true;
             else return false;
         }
-
-    }
-    */
-    public class Class1 : Button
-    {
-        public string name;
-        public string price;
-
-        public Class1(string name, string price)
+    
+        ~MySqlConnector()
         {
-            this.name = name;
-            this.price = price;
-            setContent(this.name);
+            databaseCon.Close();
+            connectionIndicator = false;
         }
-
-        public void setContent(string name)
-        {
-            Content = name;
-        }
-    }
+    
+    };
 }
+
