@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0219: Zmienna jest przypisana, ale jej wartość nie jest nigdy używana
+dotnet_diagnostic.CS0219.severity = none
