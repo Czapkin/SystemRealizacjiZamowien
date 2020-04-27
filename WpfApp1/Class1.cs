@@ -26,4 +26,22 @@ namespace WpfApp1
             Content = name;
         }
     }
+
+    public class Class2 : Button
+    {
+        public string category;
+        
+        public Class2(string category)
+        {
+            this.category = category;
+            setContent(this.category);
+        }
+        public void setContent(string name)
+        {
+            Content = name;
+        }
+
+    }
+
+
 }

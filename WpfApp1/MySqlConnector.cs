@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 /// 
-/// KLASA DO OBSLUGI ZAPYTAN MYSQL 
-/// MACIEJ 
+/// KLASA DO OBSLUGI ZAPYTAN MYSQL  
 
 namespace WpfApp1
 {
