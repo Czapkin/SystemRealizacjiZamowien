@@ -7,7 +7,6 @@ using System.Data;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-
 namespace WpfApp1
 {
 
@@ -65,7 +64,7 @@ namespace WpfApp1
         {
             InitializeComponent();
             string loginString =
-                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=Koteczek12";
+                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=";
 
             MySqlConnector mysql = new MySqlConnector(loginString);
 
