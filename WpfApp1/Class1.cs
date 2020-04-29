@@ -21,6 +21,11 @@ namespace WpfApp1
             setContent(this.name);
         }
 
+        public int getPrice()
+        {
+            return Int32.Parse(Convert.ToString(price));
+        }
+
         public void setContent(string name)
         {
             Content = name;

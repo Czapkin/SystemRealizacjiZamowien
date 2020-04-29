@@ -1,7 +1,9 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -53,20 +55,21 @@ namespace WpfApp1
                 // TU MATI OGARNIAJ 
             });
 
-
+            double to_Pay = 0;
             for (int z = productNames.Count - 1; z >= 0; --z)
             {
 
                 buttonA[z] = new Class1(productNames[z], productPrices[z]);
                 buttonA[z].Tag = productPrices[z];
 
-
                 buttonA[z].Click += new RoutedEventHandler(
                 (sendIte, arg) =>
                 {
+                    string zz = (string)(sendIte as Class1).Tag;
+                    to_Pay += Double.Parse(zz);
 
+                    Console.WriteLine("Calosc koszt to " +  to_Pay);
                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
-
                 });
 
 
