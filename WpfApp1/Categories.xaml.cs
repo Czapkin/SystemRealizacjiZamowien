@@ -20,14 +20,11 @@ namespace WpfApp1
 
     public partial class Categories : Window
     {
-
-
         public Categories(List<string> productNames, List<string> productPrices)
         {
             InitializeComponent();
             windowLoaded(productNames, productPrices);
             this.Show();
-
         }
 
         public void windowLoaded(List<string> productNames, List<string> productPrices)
@@ -55,7 +52,6 @@ namespace WpfApp1
                 // TU MATI OGARNIAJ 
             });
 
-            double to_Pay = 0;
             for (int z = productNames.Count - 1; z >= 0; --z)
             {
 
@@ -66,9 +62,8 @@ namespace WpfApp1
                 (sendIte, arg) =>
                 {
                     string zz = (string)(sendIte as Class1).Tag;
-                    to_Pay += Double.Parse(zz);
+                    Order.price += Double.Parse(zz);
 
-                    Console.WriteLine("Calosc koszt to " +  to_Pay);
                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
                 });
 

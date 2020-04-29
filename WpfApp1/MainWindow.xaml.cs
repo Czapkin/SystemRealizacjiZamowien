@@ -12,7 +12,7 @@ namespace WpfApp1
 
     public partial class MainWindow : Window
     {
-
+        public double to_Pay = 0;
         public MySqlConnector tryToConnectAgain(MySqlConnector mysql,string loginString) // ponowne laczenie z baza
         {
             while (!mysql.isConnected())   // sprawdza czy istnieje polaczenie z baza 
@@ -138,9 +138,9 @@ namespace WpfApp1
             // piąte to jego koszt, cyklicznie zmieniają się zawsze o 7 (wszystkie pola)
 
 
-            Class2[] button2 = new Class2[categoriesDisplay.Count];        
-
-
+            Class2[] button2 = new Class2[categoriesDisplay.Count];
+            
+            
             for (int q = 0; q < categoriesDisplay.Count; ++q)
             {
                 button2[q] = new Class2(categoriesDisplay[q]);
@@ -152,6 +152,7 @@ namespace WpfApp1
             (sendItem, args) =>
             {
                 var categoriesWindow = new Categories(setsNames, setsCosts);
+                Console.WriteLine("Łącznie do zaplaty to " + Order.price);
             });
 
             button2[1].Background = Brushes.LawnGreen;
@@ -160,19 +161,21 @@ namespace WpfApp1
            (sendItem, args) =>
            {
                 var categoriesWindow = new Categories(beveregesNames, beveregesCosts);
-
-            });
+               Console.WriteLine("Łącznie do zaplaty to " + Order.price);
+           });
             button2[2].Background = Brushes.LawnGreen;
             button2[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
                 var categoriesWindow = new Categories(sandwichesNames, sandwichesCosts);
+                Console.WriteLine("Łącznie do zaplaty to " + Order.price);
             });
             button2[3].Background = Brushes.LawnGreen;
             button2[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
                  var categoriesWindow = new Categories(snacksNames, snacksCosts);
+                 Console.WriteLine("Łącznie do zaplaty to " + Order.price);
              });
 
             button2[4].Background = Brushes.LawnGreen;
@@ -180,10 +183,10 @@ namespace WpfApp1
              (sendItem, args) =>
              {
                  var categoriesWindow = new Categories(dessertsNames, dessertsCosts);
+                 Console.WriteLine("Łącznie do zaplaty to " + Order.price);
              });
-
+           
         }
-
     }
 }
 
