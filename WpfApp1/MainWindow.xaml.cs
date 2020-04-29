@@ -138,18 +138,7 @@ namespace WpfApp1
             // piąte to jego koszt, cyklicznie zmieniają się zawsze o 7 (wszystkie pola)
 
 
-            Class2[] button2 = new Class2[categoriesDisplay.Count];
-            Class1[] buttonA = new Class1[setsNames.Count];
-            Class1[] buttonB = new Class1[beveregesNames.Count];
-            Class1[] buttonC = new Class1[sandwichesNames.Count];
-            Class1[] buttonD = new Class1[snacksNames.Count];
-            Class1[] buttonE = new Class1[dessertsNames.Count];
-            int[] ifPressed = new int[categoriesDisplay.Count];
-            
-            for(int i=0; i<categoriesDisplay.Count; ++i)
-            {
-                ifPressed[i] = 0;
-            }
+            Class2[] button2 = new Class2[categoriesDisplay.Count];        
 
 
             for (int q = 0; q < categoriesDisplay.Count; ++q)
@@ -158,279 +147,42 @@ namespace WpfApp1
                 grid.Children.Add(button2[q]);
             }
 
-                button2[0].Background = Brushes.LawnGreen;
-                button2[0].Click += new RoutedEventHandler(
+            button2[0].Background = Brushes.LawnGreen;
+            button2[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
-
             {
-
-                if (ifPressed[0] == 0)
-                {
-                    ifPressed[1] = 0;
-                    ifPressed[2] = 0;
-                    ifPressed[3] = 0;
-                    ifPressed[4] = 0;
-
-                    for (int z = setsNames.Count - 1; z >= 0; --z)
-                    {
-                        buttonA[z] = new Class1(setsNames[z], setsCosts[z]);
-                        buttonA[z].Tag = setsCosts[z];
-
-
-                        ifPressed[0] = 1;
-                        buttonA[z].Click += new RoutedEventHandler(
-                        (sendIte, arg) =>
-                        {
-
-                            Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
-
-                        });
-                        grid.Children.Add(buttonA[z]);
-                    };
-                    foreach (var element in buttonB)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                    foreach (var element in buttonC)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                    foreach (var element in buttonD)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                    foreach (var element in buttonE)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                }
+                var categoriesWindow = new Categories(setsNames, setsCosts);
             });
 
             button2[1].Background = Brushes.LawnGreen;
             button2[1].Click += new RoutedEventHandler(
-       (sendItem, args) =>
-
-       {
-           if (ifPressed[1] == 0)
+       
+           (sendItem, args) =>
            {
-               ifPressed[0] = 0;
-               ifPressed[2] = 0;
-               ifPressed[3] = 0;
-               ifPressed[4] = 0;
+                var categoriesWindow = new Categories(beveregesNames, beveregesCosts);
 
-               for (int z = beveregesNames.Count - 1; z >= 0; --z)
-               {
-                   buttonB[z] = new Class1(beveregesNames[z], beveregesCosts[z]);
-                   buttonB[z].Tag = beveregesCosts[z];
-
-                   ifPressed[1] = 1;
-                   buttonB[z].Click += new RoutedEventHandler(
-                    (sendIte, arg) =>
-                   {
-
-                       Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
-
-                   });
-                   grid.Children.Add(buttonB[z]);
-               };
-
-               foreach (var element in buttonA)
-               {
-                   grid.Children.Remove(element);
-               }
-               foreach (var element in buttonC)
-               {
-                   grid.Children.Remove(element);
-               }
-               foreach (var element in buttonD)
-               {
-                   grid.Children.Remove(element);
-               }
-               foreach (var element in buttonE)
-               {
-                   grid.Children.Remove(element);
-               }
-
-
-           }
-       });
+            });
             button2[2].Background = Brushes.LawnGreen;
             button2[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
-
             {
-                if (ifPressed[2] == 0)
-                {
-                    ifPressed[0] = 0;
-                    ifPressed[1] = 0;
-                    ifPressed[3] = 0;
-                    ifPressed[4] = 0;
-
-                    for (int z = sandwichesNames.Count - 1; z >= 0; --z)
-                    {
-
-                        buttonC[z] = new Class1(sandwichesNames[z], sandwichesCosts[z]);
-                        {
-                            buttonC[z].Tag = sandwichesCosts[z];
-                        };
-
-                        ifPressed[2] = 1;
-                        buttonC[z].Click += new RoutedEventHandler(
-                                (sendIte, arg) =>
-                    {
-
-                        Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
-
-                    });
-                        grid.Children.Add(buttonC[z]);
-                    };
-                    foreach (var element in buttonA)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                    foreach (var element in buttonB)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                    foreach (var element in buttonD)
-                    {
-                        grid.Children.Remove(element);
-                    }
-                    foreach (var element in buttonE)
-                    {
-                        grid.Children.Remove(element);
-                    }
-
-                }
+                var categoriesWindow = new Categories(sandwichesNames, sandwichesCosts);
             });
             button2[3].Background = Brushes.LawnGreen;
             button2[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
-
              {
-                 if (ifPressed[3] == 0)
-                 {
-                     ifPressed[0] = 0;
-                     ifPressed[1] = 0;
-                     ifPressed[2] = 0;
-                     ifPressed[4] = 0;
-
-
-                     for (int z = snacksNames.Count - 1; z >= 0; --z)
-                     {
-                         buttonD[z] = new Class1(snacksNames[z], snacksCosts[z]);
-                         {
-                             buttonD[z].Tag = snacksCosts[z];
-                         };
-
-                         ifPressed[3] = 1;
-                         buttonD[z].Click += new RoutedEventHandler(
-                                            (sendIte, arg) =>
-                                 {
-
-                                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
-
-                                 });
-                         grid.Children.Add(buttonD[z]);
-                     };
-
-                     foreach (var element in buttonA)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                     foreach (var element in buttonB)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                     foreach (var element in buttonC)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                     foreach (var element in buttonE)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                 }
+                 var categoriesWindow = new Categories(snacksNames, snacksCosts);
              });
 
             button2[4].Background = Brushes.LawnGreen;
             button2[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
-
              {
-
-                 if (ifPressed[4] == 0)
-                 {
-                     ifPressed[0] = 0;
-                     ifPressed[1] = 0;
-                     ifPressed[2] = 0;
-                     ifPressed[3] = 0;
-
-
-                     for (int z = dessertsNames.Count - 1; z >= 0; --z)
-                     {
-                         buttonE[z] = new Class1(dessertsNames[z], dessertsCosts[z]);
-                         {
-                             buttonE[z].Tag = dessertsCosts[z];
-                         };
-
-                         ifPressed[4] = 1;
-                         buttonE[z].Click += new RoutedEventHandler(
-                                            (sendIte, arg) =>
-                                 {
-
-                                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
-
-                                 });
-                         grid.Children.Add(buttonE[z]);
-                     };
-
-                     foreach (var element in buttonA)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                     foreach (var element in buttonB)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                     foreach (var element in buttonD)
-                     {
-                         grid.Children.Remove(element);
-                     }
-                     foreach (var element in buttonC)
-                     {
-                         grid.Children.Remove(element);
-                     }
-
-
-                 }
+                 var categoriesWindow = new Categories(dessertsNames, dessertsCosts);
              });
 
-
-
         }
-
-        /*void button_ClickOnCategories(object sender, RoutedEventArgs e)         
-            // co sie stanie gdy nacisniemy na element  
-        {
-            
-            
-            for (int i = productName.Count - 1; i >= 0; i--)
-            {
-                Class1 button = new Class1(productName[i], productCost[i])       // dalsza czesc to automatyczna generacja okienek
-                {
-                    Tag = productCost[i]
-                };
-
-                button.Click += new RoutedEventHandler(button_Click);
-               //grid.Children.Add(button);
-            }
-        }
-        */ /*
-        void button_Click(object sender, RoutedEventArgs e)         // co sie stanie gdy nacisniemy na element
-        {
-                Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sender as Class1).Tag));
-        }*/
 
     }
 }

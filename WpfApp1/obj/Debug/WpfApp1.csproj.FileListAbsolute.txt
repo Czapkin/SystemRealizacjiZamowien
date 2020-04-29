@@ -35,3 +35,5 @@ C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\bin\Debug\Ubiety.Dns.Core.dll
 C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\bin\Debug\Renci.SshNet.dll
 C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\bin\Debug\MySql.Data.xml
 C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\Categories.g.cs
+C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\Categories.baml
