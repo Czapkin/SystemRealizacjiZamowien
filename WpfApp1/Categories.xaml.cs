@@ -20,14 +20,14 @@ namespace WpfApp1
 
     public partial class Categories : Window
     {
-        public Categories(List<string> productNames, List<string> productPrices)
+        public Categories(Label label,List<string> productNames, List<string> productPrices)
         {
             InitializeComponent();
-            windowLoaded(productNames, productPrices);
+            windowLoaded(label,productNames, productPrices);
             this.Show();
         }
 
-        public void windowLoaded(List<string> productNames, List<string> productPrices)
+        public void windowLoaded(Label label,List<string> productNames, List<string> productPrices)
         {
 
             Class1[] buttonA = new Class1[productNames.Count];
@@ -42,15 +42,6 @@ namespace WpfApp1
                 this.Close();
             });
 
-            System.Windows.Controls.Button finBtn = new Button();
-            finBtn.Name = "Finalize";
-            finBtn.Content = "Finalize";
-            finBtn.Background = Brushes.LawnGreen;
-            finBtn.Click += new RoutedEventHandler(
-            (sendIte, arg) =>
-            {
-                // TU MATI OGARNIAJ 
-            });
 
             for (int z = productNames.Count - 1; z >= 0; --z)
             {
@@ -63,6 +54,7 @@ namespace WpfApp1
                 {
                     string zz = (string)(sendIte as Class1).Tag;
                     Order.price += Double.Parse(zz);
+                    label.Content = Order.price;
 
                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
                 });
@@ -72,7 +64,6 @@ namespace WpfApp1
             };
 
             grid.Children.Add(retBtn);
-            grid.Children.Add(finBtn);
         }
 
 

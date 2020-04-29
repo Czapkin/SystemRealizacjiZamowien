@@ -37,6 +37,12 @@ namespace WpfApp1
             return mysql;
         }
 
+        //private void Label_Loaded(object sender, RoutedEventArgs e)
+        //{
+         //   var label = sender as Label;
+          //  label.Content = Order.price;
+        //}
+
         public void loopThroughDataT(DataTable element, List<string> lista)
         {
             foreach (DataRow dbRow in element.Rows)
@@ -139,19 +145,37 @@ namespace WpfApp1
 
 
             Class2[] button2 = new Class2[categoriesDisplay.Count];
-            
-            
+            Label label = new Label();  // na razie z pizdy labela dalem do zmiany wiadomo
+            label.Height = 28;          // to jest to gowno w lewym gornym rogu
+            label.Width = 100;
+            label.HorizontalAlignment = HorizontalAlignment.Left;
+            label.VerticalAlignment = VerticalAlignment.Top;
+            grid.Children.Add(label);
+
             for (int q = 0; q < categoriesDisplay.Count; ++q)
             {
                 button2[q] = new Class2(categoriesDisplay[q]);
                 grid.Children.Add(button2[q]);
             }
 
+            System.Windows.Controls.Button finBtn = new Button();
+            finBtn.Name = "Finalize";
+            finBtn.Content = "Finalize";
+            finBtn.Background = Brushes.LightBlue;
+            
+            // event dla przycisku finilize
+            finBtn.Click += new RoutedEventHandler(
+            (sendIte, arg) =>
+            {
+                // TU MATI OGARNIAJ 
+            });
+
+            grid.Children.Add(finBtn);
             button2[0].Background = Brushes.LawnGreen;
             button2[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                var categoriesWindow = new Categories(setsNames, setsCosts);
+                var categoriesWindow = new Categories(label,setsNames, setsCosts);
                 Console.WriteLine("Łącznie do zaplaty to " + Order.price);
             });
 
@@ -160,21 +184,21 @@ namespace WpfApp1
        
            (sendItem, args) =>
            {
-                var categoriesWindow = new Categories(beveregesNames, beveregesCosts);
+                var categoriesWindow = new Categories(label,beveregesNames, beveregesCosts);
                Console.WriteLine("Łącznie do zaplaty to " + Order.price);
            });
             button2[2].Background = Brushes.LawnGreen;
             button2[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                var categoriesWindow = new Categories(sandwichesNames, sandwichesCosts);
+                var categoriesWindow = new Categories(label,sandwichesNames, sandwichesCosts);
                 Console.WriteLine("Łącznie do zaplaty to " + Order.price);
             });
             button2[3].Background = Brushes.LawnGreen;
             button2[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 var categoriesWindow = new Categories(snacksNames, snacksCosts);
+                 var categoriesWindow = new Categories(label,snacksNames, snacksCosts);
                  Console.WriteLine("Łącznie do zaplaty to " + Order.price);
              });
 
@@ -182,7 +206,7 @@ namespace WpfApp1
             button2[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 var categoriesWindow = new Categories(dessertsNames, dessertsCosts);
+                 var categoriesWindow = new Categories(label,dessertsNames, dessertsCosts);
                  Console.WriteLine("Łącznie do zaplaty to " + Order.price);
              });
            
