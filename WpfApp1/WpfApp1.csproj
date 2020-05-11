@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChoosePaymentMethod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +75,7 @@
     <Compile Include="Categories.xaml.cs">
       <DependentUpon>Categories.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChoosePaymentMethod.xaml.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Class3.cs" />
     <Compile Include="MainWindow.xaml.cs">

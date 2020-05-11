@@ -30,7 +30,7 @@ namespace WpfApp1
         public void windowLoaded(Label label,List<string> productNames, List<string> productPrices)
         {
 
-            Class1[] buttonA = new Class1[productNames.Count];
+            itemButton [] itemButto = new itemButton[productNames.Count];
 
             System.Windows.Controls.Button retBtn = new Button();
             retBtn.Name = "Back";
@@ -46,21 +46,21 @@ namespace WpfApp1
             for (int z = productNames.Count - 1; z >= 0; --z)
             {
 
-                buttonA[z] = new Class1(productNames[z], productPrices[z]);
-                buttonA[z].Tag = productPrices[z];
+                itemButto[z] = new itemButton(productNames[z], productPrices[z]);
+                itemButto[z].Tag = productPrices[z];
 
-                buttonA[z].Click += new RoutedEventHandler(
+                itemButto[z].Click += new RoutedEventHandler(
                 (sendIte, arg) =>
                 {
-                    string zz = (string)(sendIte as Class1).Tag;
+                    string zz = (string)(sendIte as itemButton).Tag;
                     Order.price += Double.Parse(zz);
                     label.Content = Order.price;
 
-                    Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as Class1).Tag));
+                    Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as itemButton).Tag));
                 });
 
 
-                grid.Children.Add(buttonA[z]);
+                grid.Children.Add(itemButto[z]);
             };
 
             grid.Children.Add(retBtn);

@@ -37,3 +37,5 @@ C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\bin\Debug\MySql.Data.xml
 C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\Categories.g.cs
 C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\Categories.baml
+C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\ChoosePaymentMethod.baml
+C:\Users\Maciej\Desktop\MatTest\WpfApp1\WpfApp1\obj\Debug\ChoosePaymentMethod.g.cs

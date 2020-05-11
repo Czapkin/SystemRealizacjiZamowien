@@ -9,12 +9,12 @@ using System.Windows.Controls;
 namespace WpfApp1
 {
     
-    public class Class1 : Button
+    public class itemButton : Button
     {
         public string name;
         public string price;
 
-        public Class1(string name, string price)
+        public itemButton(string name, string price)
         {
             this.name = name;
             this.price = price;
@@ -32,11 +32,11 @@ namespace WpfApp1
         }
     }
 
-    public class Class2 : Button
+    public class categoryButton : Button
     {
         public string category;
-        
-        public Class2(string category)
+
+        public categoryButton(string category)
         {
             this.category = category;
             setContent(this.category);

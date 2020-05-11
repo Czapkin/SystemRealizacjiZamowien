@@ -6,6 +6,8 @@ using System.Diagnostics;
 using System.Data;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Linq;
+using Card_Payment;
 
 namespace WpfApp1
 {
@@ -70,7 +72,7 @@ namespace WpfApp1
         {
             InitializeComponent();
             string loginString =
-                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=";
+                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=2";
 
             MySqlConnector mysql = new MySqlConnector(loginString);
 
@@ -144,7 +146,7 @@ namespace WpfApp1
             // piąte to jego koszt, cyklicznie zmieniają się zawsze o 7 (wszystkie pola)
 
 
-            Class2[] button2 = new Class2[categoriesDisplay.Count];
+            categoryButton[] categoryButto = new categoryButton[categoriesDisplay.Count];
             Label label = new Label();  // na razie z pizdy labela dalem do zmiany wiadomo
             label.Height = 28;          // to jest to gowno w lewym gornym rogu
             label.Width = 100;
@@ -154,62 +156,62 @@ namespace WpfApp1
 
             for (int q = 0; q < categoriesDisplay.Count; ++q)
             {
-                button2[q] = new Class2(categoriesDisplay[q]);
-                grid.Children.Add(button2[q]);
+                categoryButto[q] = new categoryButton(categoriesDisplay[q]);
+                grid.Children.Add(categoryButto[q]);
             }
 
             System.Windows.Controls.Button finBtn = new Button();
             finBtn.Name = "Finalize";
             finBtn.Content = "Finalize";
             finBtn.Background = Brushes.LightBlue;
-            
+
+
             // event dla przycisku finilize
             finBtn.Click += new RoutedEventHandler(
             (sendIte, arg) =>
             {
-                // TU MATI OGARNIAJ 
+                var PaymentWindow = new ChoosePaymentMethod();
+                PaymentWindow.Show();
             });
 
             grid.Children.Add(finBtn);
-            button2[0].Background = Brushes.LawnGreen;
-            button2[0].Click += new RoutedEventHandler(
+            categoryButto[0].Background = Brushes.LawnGreen;
+            categoryButto[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
                 var categoriesWindow = new Categories(label,setsNames, setsCosts);
                 Console.WriteLine("Łącznie do zaplaty to " + Order.price);
             });
 
-            button2[1].Background = Brushes.LawnGreen;
-            button2[1].Click += new RoutedEventHandler(
-       
-           (sendItem, args) =>
+            categoryButto[1].Background = Brushes.LawnGreen;
+            categoryButto[1].Click += new RoutedEventHandler(
+            (sendItem, args) =>
            {
-                var categoriesWindow = new Categories(label,beveregesNames, beveregesCosts);
+               var categoriesWindow = new Categories(label,beveregesNames, beveregesCosts);
                Console.WriteLine("Łącznie do zaplaty to " + Order.price);
            });
-            button2[2].Background = Brushes.LawnGreen;
-            button2[2].Click += new RoutedEventHandler(
+            categoryButto[2].Background = Brushes.LawnGreen;
+            categoryButto[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
                 var categoriesWindow = new Categories(label,sandwichesNames, sandwichesCosts);
                 Console.WriteLine("Łącznie do zaplaty to " + Order.price);
             });
-            button2[3].Background = Brushes.LawnGreen;
-            button2[3].Click += new RoutedEventHandler(
+            categoryButto[3].Background = Brushes.LawnGreen;
+            categoryButto[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
                  var categoriesWindow = new Categories(label,snacksNames, snacksCosts);
                  Console.WriteLine("Łącznie do zaplaty to " + Order.price);
              });
 
-            button2[4].Background = Brushes.LawnGreen;
-            button2[4].Click += new RoutedEventHandler(
+            categoryButto[4].Background = Brushes.LawnGreen;
+            categoryButto[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
                  var categoriesWindow = new Categories(label,dessertsNames, dessertsCosts);
                  Console.WriteLine("Łącznie do zaplaty to " + Order.price);
              });
-           
         }
     }
 }

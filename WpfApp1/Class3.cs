@@ -9,6 +9,5 @@ namespace WpfApp1
     class Order
     {
         public static double price;
-
     }
 }
