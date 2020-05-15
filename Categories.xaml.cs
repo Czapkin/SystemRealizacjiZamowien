@@ -1,18 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using ProjektWPF;
 
 namespace SystemRealizacjiZamowien
 {
     public partial class Categories : Window
     {
+        public static Window onlyInstance;
         public Categories(Label label,List<string> productNames, List<string> productPrices)
         {
             InitializeComponent();
             windowLoaded(label,productNames, productPrices);
-            this.Show();
+            Show();
+            WindowStyle = WindowStyle.None;
+        }
+
+        public void setCurrentOrder(string productNamesShort)
+        {
+            var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
+            mainWin.CurrentOrder.Content += Order.amountOfp.ToString() + " " + productNamesShort + ", ";
         }
 
         public void windowLoaded(Label label,List<string> productNames, List<string> productPrices)
@@ -28,6 +38,10 @@ namespace SystemRealizacjiZamowien
             (sendIte, arg) =>
             {
                 this.Close();
+                label.Content = Order.total.ToString();
+                var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
+                mainWin.Show();
+                //onlyInstance.Show();
             });
 
             for (int z = productNames.Count - 1; z >= 0; --z)
@@ -39,15 +53,24 @@ namespace SystemRealizacjiZamowien
                 itemButto[z].Click += new RoutedEventHandler(
                 (sendIte, arg) =>
                 {
-                    string zz = (string)(sendIte as itemButton).Tag;
-                    Order.price += Double.Parse(zz);
-                    string showZ = Order.price.ToString();
-                    label.Content = showZ;//Order.price;
+
+                    //string amountOfProd = Order.amountOfp.ToString();
+                    
+                    string productName = (string)(sendIte as itemButton).name;
+                    string stringPrice = (string)(sendIte as itemButton).Tag;
+                    //string final = amountOfProd + " " + productName;
+
+                    Order.price = Double.Parse(stringPrice);
+                    Hide();
+                    onlyInstance = new Window1(label,productName);
+                    onlyInstance.Name = "CalculateOrder";
+                    onlyInstance.Show();
 
                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as itemButton).Tag));
                 });
 
                 grid.Children.Add(itemButto[z]);
+                //label.Content = Order.total.ToString();
             };
 
             grid.Children.Add(retBtn);

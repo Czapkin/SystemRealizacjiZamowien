@@ -128,5 +128,14 @@ namespace SystemRealizacjiZamowien
             win.Show();
             Close();
         }
+
+        private void CountedCashClick(object sender, RoutedEventArgs e)
+        {
+            gotowka = cashToPay.ToString();
+            zaplacone.Text = gotowka;
+            do_wydania = cashToPay - Convert.ToDouble(value: gotowka);
+            change.Text = do_wydania.ToString();
+            kropka = 3;
+        }
     }
 }

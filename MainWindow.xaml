@@ -4,12 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="/Sources/Main-window-icon.jpg"
+        Title="System Realizacji Zamowien" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="WhiteSmoke">
     <Grid>
-        <Button Content="Complete the order" Click="CompleteTheOrderClick" HorizontalAlignment="Left" Height="81" Margin="580,320,0,0" VerticalAlignment="Top" Width="178"/>
-        <Label Name="LabelCash" Content="Cash to pay:" Height="25" Width="100" Margin="350,-300,0,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></Label>
-        <Label Name="CashToPay" Content="0,00" Height="25" Width="100" Margin="450,-300,0,0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
-        <Button Click="ExitProgram" Content="Quit" HorizontalContentAlignment="Center" Height="25" Width="40" Margin="40,37,702,347"/>
-        <UniformGrid x:Name="grid" Margin="121,90,121,109"/>
+        <Button Content="Complete the order" Click="CompleteTheOrderClick" HorizontalAlignment="Left" Height="81" Margin="610,360,0,0" VerticalAlignment="Top" Width="178"/>
+        <Label Name="LabelCash" Content="Cash to pay:" FontSize="14" Width="100" Margin="572,10,122,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Label Name="Order" Content="Current order:" FontSize="14" Width="100" Margin="121,10,573,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Label Name="CurrentOrder" Height="27" FontSize="14" Background="LightGray" Margin="121,53,222,348" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  BorderBrush="Black" BorderThickness="1"/>
+        <Label Name="CashToPay" FontSize="14" Height="27" Background="LightGray" Content="0,00" Width="100" Margin="572,53,122,348" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="1"/>
+        <Button Click="ExitProgram" Content="Quit" HorizontalContentAlignment="Center" Height="25" Width="70" Margin="705,5,25,365"/>
+        <Border BorderBrush="DimGray" BorderThickness="3">
+            <UniformGrid x:Name="grid" Background="LightGray" Margin="121,100,121,109"/>
+        </Border>
     </Grid>
 </Window>

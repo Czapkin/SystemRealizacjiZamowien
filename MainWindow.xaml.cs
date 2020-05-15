@@ -14,6 +14,7 @@ namespace SystemRealizacjiZamowien
     {
         public double to_Pay = 0;
         public static Window onlyInstance;
+        public static Window onlyInstanceCat;
         public MySqlConnector tryToConnectAgain(MySqlConnector mysql,string loginString) // ponowne laczenie z baza
         {
             while (!mysql.isConnected())   // sprawdza czy istnieje polaczenie z baza 
@@ -158,33 +159,44 @@ namespace SystemRealizacjiZamowien
             categoryButto[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                var categoriesWindow = new Categories(CashToPay, setsNames, setsCosts);
+                onlyInstanceCat = new Categories(CashToPay, setsNames, setsCosts);
+                onlyInstanceCat.Name = "Categories";
+                Hide();
             });
 
             categoryButto[1].Background = Brushes.LawnGreen;
             categoryButto[1].Click += new RoutedEventHandler(
             (sendItem, args) =>
            {
-               var categoriesWindow = new Categories(CashToPay, beveregesNames, beveregesCosts);
+               onlyInstanceCat = new Categories(CashToPay, beveregesNames, beveregesCosts);
+               onlyInstanceCat.Name = "Categories";
+               Hide();
            });
             categoryButto[2].Background = Brushes.LawnGreen;
             categoryButto[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                var categoriesWindow = new Categories(CashToPay, sandwichesNames, sandwichesCosts);
+                onlyInstanceCat = new Categories(CashToPay, sandwichesNames, sandwichesCosts);
+                onlyInstanceCat.Name = "Categories";
+                Hide();
             });
             categoryButto[3].Background = Brushes.LawnGreen;
             categoryButto[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 var categoriesWindow = new Categories(CashToPay, snacksNames, snacksCosts);
+                 onlyInstanceCat = new Categories(CashToPay, snacksNames, snacksCosts);
+                 onlyInstanceCat.Name = "Categories";
+                 Hide();
              });
 
             categoryButto[4].Background = Brushes.LawnGreen;
             categoryButto[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 var categoriesWindow = new Categories(CashToPay, dessertsNames, dessertsCosts);
+                 /*var categoriesWindow*/
+                 onlyInstanceCat = new Categories(CashToPay, dessertsNames, dessertsCosts);
+                 onlyInstanceCat.Name = "Categories";
+                 Hide();
              });
         }
         public void generateTextBlock()

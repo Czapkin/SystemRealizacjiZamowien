@@ -22,6 +22,6 @@
             </Image>
         </Button>
         <Image x:Name="Loading" gif:AnimationBehavior.SourceUri="/Sources/img-loading.gif"  Visibility="Hidden"  HorizontalAlignment="Left" Height="100" Width="100" Margin="96,110,0,109"></Image>
-        <Image Name="CheckMark" Visibility="Hidden" Height="100" Width="100" Source="/Sources/check-mark-2025986_960_720.png" />
+        <Image Name="CheckMark" Visibility="Hidden" Height="100" Width="100" Source="/Sources/check-mark.png" />
     </Grid>
 </Window>

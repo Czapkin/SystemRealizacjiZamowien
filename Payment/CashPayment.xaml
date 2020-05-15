@@ -23,6 +23,7 @@
         <Button Content="," HorizontalAlignment="Left" Margin="164,453,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" />
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="55,453,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFE52525" FontSize="16" Click="anuluj"/>
         <Button Content="Confirm" HorizontalAlignment="Left" Margin="270,453,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF5AD921" Click="potwierdz"/>
+        <Button Content="Counted Cash" HorizontalAlignment="Left" Margin="80,520,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="20" Click="CountedCashClick"/>
         <TextBox x:Name="do_zaplaty"  HorizontalAlignment="Left" Height="37" Margin="105,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" FontSize="20" TextAlignment="Right"/>
         <TextBox x:Name="change"  HorizontalAlignment="Left" Height="37" Margin="105,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" FontSize="20" TextAlignment="Right"/>
         <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
