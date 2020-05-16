@@ -9,65 +9,13 @@ using System.Linq;
 
 namespace SystemRealizacjiZamowien
 {
-
+    //-------------------------------------DO OBSLUGI GLOWNEGO OKIENKA, MYSQL ITD-------------------------------------------
     public partial class MainWindow : Window
     {
         public double to_Pay = 0;
         public static Window onlyInstance;
         public static Window onlyInstanceCat;
-        public MySqlConnector tryToConnectAgain(MySqlConnector mysql,string loginString) // ponowne laczenie z baza
-        {
-            while (!mysql.isConnected())   // sprawdza czy istnieje polaczenie z baza 
-            {
-                MessageBoxResult result = MessageBox.Show("Failed connecting to database\nTry again?", "ERROR"
-                    , MessageBoxButton.YesNo);
-                mysql = new MySqlConnector(loginString);
-                switch (result)
-                {
-                    case MessageBoxResult.No:
-                        {
-                            System.Environment.Exit(0);
-                            break;
-                        }
-                    case MessageBoxResult.Yes:
-                        {
-                            continue;
-                        }
-
-                }
-            }
-            return mysql;
-        }
-
-        //private void Label_Loaded(object sender, RoutedEventArgs e)
-        //{
-         //   var label = sender as Label;
-          //  label.Content = Order.price;
-        //}
-
-        public void loopThroughDataT(DataTable element, List<string> lista)
-        {
-            foreach (DataRow dbRow in element.Rows)
-            {
-                foreach (DataColumn dbColumns in element.Columns)
-                {
-                    var field1 = dbRow[dbColumns].ToString();
-                    lista.Add(field1);
-                }
-            }
-        }
-
-        public List<string> parseDataFromDataTable(int indexOfProdInDB, int iterator, List<string>WholeProducts)
-        {
-            List<string> temporaryArr = new List<string>();
-            
-            for (; indexOfProdInDB <= WholeProducts.Count; indexOfProdInDB += iterator) 
-            {                                                
-                temporaryArr.Add((WholeProducts[indexOfProdInDB]));          
-            }
-            return temporaryArr;
-        }
-
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -80,7 +28,7 @@ namespace SystemRealizacjiZamowien
 
             if (!mysql.isConnected())
             {
-                mysql = tryToConnectAgain(mysql,loginString);  // Jesli nie nawiazano polaczenia z baza sproboj ponownie
+                mysql = tryToConnectAgain(mysql,loginString);
             }
 
             const byte numOfFoodCategories = 5;
@@ -118,34 +66,31 @@ namespace SystemRealizacjiZamowien
             loopThroughDataT(n[3], WholeSets);
             loopThroughDataT(n[4], WholeSnacks);
 
+            int iteratorProductID = 0;
+            int iteratorFullName = 1;
+            int iteratorShortNames = 2;
+            int iteratorCategoriesID = 3;
+            int iteratorCallories = 4;
+            int iteratorPrice = 5;
+            int orderCount = 6;
 
-            int iterator = 0;
-
-            var dessertsNames = parseDataFromDataTable(iterator = 1, 7, WholeDesserts);
-            var dessertsCosts = parseDataFromDataTable(iterator = 5, 7, WholeDesserts);
+            var dessertsNames = parseDataFromDataTable(iteratorShortNames, 7, WholeDesserts);
+            var dessertsCosts = parseDataFromDataTable(iteratorPrice, 7, WholeDesserts);
             
-            var sandwichesNames = parseDataFromDataTable(iterator = 1, 7, WholeSandwiches);
-            var sandwichesCosts = parseDataFromDataTable(iterator = 5, 7, WholeSandwiches);
+            var sandwichesNames = parseDataFromDataTable(iteratorShortNames, 7, WholeSandwiches);
+            var sandwichesCosts = parseDataFromDataTable(iteratorPrice , 7, WholeSandwiches);
 
-            var setsNames = parseDataFromDataTable(iterator = 1, 7, WholeSets);
-            var setsCosts = parseDataFromDataTable(iterator = 5, 7, WholeSets);
+            var setsNames = parseDataFromDataTable(iteratorShortNames, 7, WholeSets);
+            var setsCosts = parseDataFromDataTable(iteratorPrice, 7, WholeSets);
             
-            var snacksNames = parseDataFromDataTable(iterator = 1, 7, WholeSnacks);
-            var snacksCosts = parseDataFromDataTable(iterator = 5, 7, WholeSnacks);
+            var snacksNames = parseDataFromDataTable(iteratorShortNames, 7, WholeSnacks);
+            var snacksCosts = parseDataFromDataTable(iteratorPrice, 7, WholeSnacks);
             
-            var beveregesNames = parseDataFromDataTable(iterator = 1, 7, WholeBevereges);
-            var beveregesCosts = parseDataFromDataTable(iterator = 5, 7, WholeBevereges);
+            var beveregesNames = parseDataFromDataTable(iteratorShortNames, 7, WholeBevereges);
+            var beveregesCosts = parseDataFromDataTable(iteratorPrice, 7, WholeBevereges);
 
+            var categoriesDisplay = parseDataFromDataTable(1, 2, listOfCategories);
 
-            //var productName = parseDataFromDataTable(iterator = 1, 7, WholeProduct);
-            //var productCost = parseDataFromDataTable(iterator = 5,7, WholeProduct);
-            var categoriesDisplay = parseDataFromDataTable(iterator = 1, 2, listOfCategories);
-
-            // nazwa produktu w bazie danych jest druga (liczac od 0)
-            // iterujemy po tablicy ktora zawiera wszystkie elementy bazy 
-            // (lacznie 7) dzieki czemu w tej petli dodajemy tylko nazwy produkt.
-            // np pierwsze (nie liczac 0) pole w bazie danych to nazwa produktu 
-            // piąte to jego koszt, cyklicznie zmieniają się zawsze o 7 (wszystkie pola)
 
             categoryButton[] categoryButto = new categoryButton[categoriesDisplay.Count];
 
@@ -193,7 +138,6 @@ namespace SystemRealizacjiZamowien
             categoryButto[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 /*var categoriesWindow*/
                  onlyInstanceCat = new Categories(CashToPay, dessertsNames, dessertsCosts);
                  onlyInstanceCat.Name = "Categories";
                  Hide();
@@ -204,6 +148,7 @@ namespace SystemRealizacjiZamowien
             TextBlock txBlock = new TextBlock();
         }
 
+        //-------------------------------------DO OBSLUGI FINALIZACJI ZAMOWIENIA-------------------------------------------
         private void CompleteTheOrderClick(object sender, RoutedEventArgs e)
         {
             var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
@@ -227,6 +172,7 @@ namespace SystemRealizacjiZamowien
             }
         }
 
+        //-------------------------------------WYJSCIE Z PROGRAMU-------------------------------------------
         private void ExitProgram(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you really want to close the application?", "Warning", MessageBoxButton.YesNo);
@@ -239,6 +185,58 @@ namespace SystemRealizacjiZamowien
                     break;
             }
         }
+
+        //-------------------------------------PARSING DANYCH DO INDYWIDUALYCH LIST-------------------------------------------
+        public List<string> parseDataFromDataTable(int indexOfProdInDB, int iterator, List<string> WholeProducts)
+        {
+            List<string> temporaryArr = new List<string>();
+
+            for (; indexOfProdInDB <= WholeProducts.Count; indexOfProdInDB += iterator)
+            {
+                temporaryArr.Add((WholeProducts[indexOfProdInDB]));
+            }
+            return temporaryArr;
+        }
+
+        //-------------------------------------PARSING DANYCH Z BD DO LISTY-------------------------------------------
+        public void loopThroughDataT(DataTable element, List<string> lista)
+        {
+            foreach (DataRow dbRow in element.Rows)
+            {
+                foreach (DataColumn dbColumns in element.Columns)
+                {
+                    var field1 = dbRow[dbColumns].ToString();
+                    lista.Add(field1);
+                }
+            }
+        }
+
+        //-------------------------------------SPRAWDZA CZY ISTNIEJE POLACZENIE-------------------------------------------
+        public MySqlConnector tryToConnectAgain(MySqlConnector mysql, string loginString) 
+        {
+            while (!mysql.isConnected())  
+            {
+                MessageBoxResult result = MessageBox.Show("Failed connecting to database\nTry again?", "ERROR"
+                    , MessageBoxButton.YesNo);
+                mysql = new MySqlConnector(loginString);
+                switch (result)
+                {
+                    case MessageBoxResult.No:
+                        {
+                            System.Environment.Exit(0);
+                            break;
+                        }
+                    case MessageBoxResult.Yes:
+                        {
+                            continue;
+                        }
+
+                }
+            }
+            return mysql;
+        }
+
+
     }
 }
 

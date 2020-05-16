@@ -6,6 +6,8 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using ProjektWPF;
 
+//-------------------------------------KLASA DO OBSLUGI WYSWIETLANIA PRODUKTOW-------------------------------------------
+
 namespace SystemRealizacjiZamowien
 {
     public partial class Categories : Window
@@ -19,11 +21,14 @@ namespace SystemRealizacjiZamowien
             WindowStyle = WindowStyle.None;
         }
 
+        //-------------------------------------WYSWIETLA TEKST W LABELU - ZAMOWIENIE ILOSC-------------------------------------------
         public void setCurrentOrder(string productNamesShort)
         {
             var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
             mainWin.CurrentOrder.Content += Order.amountOfp.ToString() + " " + productNamesShort + ", ";
         }
+
+        //-------------------------------------INICJUJE OKIENKA Z PRODUKTAMI I PRZYCISK BACK-------------------------------------------
 
         public void windowLoaded(Label label,List<string> productNames, List<string> productPrices)
         {
@@ -70,7 +75,6 @@ namespace SystemRealizacjiZamowien
                 });
 
                 grid.Children.Add(itemButto[z]);
-                //label.Content = Order.total.ToString();
             };
 
             grid.Children.Add(retBtn);

@@ -3,6 +3,8 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
+//-------------------------------------PLATNOSC FIZYCZNYM PIENIADZEM-------------------------------------------
+
 namespace SystemRealizacjiZamowien
 {
     public partial class CashPayment : Window

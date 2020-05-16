@@ -1,5 +1,7 @@
 ﻿using System.Windows.Controls;
 
+//-------------------------------------DO GENEROWANIA PRZYCISKOW KATEGORII-------------------------------------------
+
 namespace SystemRealizacjiZamowien
 {
     public class categoryButton : Button

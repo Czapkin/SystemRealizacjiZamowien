@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Windows;
 
+//-------------------------------------DO OBSLUGI WYBORU KARTA CZY FIZYCZNY PIENIADZ-------------------------------------------
+
 namespace SystemRealizacjiZamowien
 {
     public partial class ChoosePaymentMethod : Window

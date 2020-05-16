@@ -3,6 +3,8 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Threading;
 
+//-------------------------------------PLATNOSC KARTA-------------------------------------------
+
 namespace SystemRealizacjiZamowien
 {
     public partial class CardPayment : Window

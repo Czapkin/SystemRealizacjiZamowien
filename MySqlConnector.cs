@@ -2,7 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Data;
 
-/// KLASA DO OBSLUGI ZAPYTAN MYSQL  
+//-------------------------------------OPTYMALIZACJA DO ZAPYTAN MYSQL-------------------------------------------
 
 namespace SystemRealizacjiZamowien
 {

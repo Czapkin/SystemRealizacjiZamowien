@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Controls;
 
+//-------------------------------------DO GENEROWANIA PRZYCISKOW PRODUKTOW-------------------------------------------
+
 namespace SystemRealizacjiZamowien
 {
     public class itemButton : Button

@@ -1,4 +1,6 @@
-﻿namespace SystemRealizacjiZamowien
+﻿//-------------------------------------PRZECHOWUJE INFORMACJE O ZAMOWIENIU-------------------------------------------
+
+namespace SystemRealizacjiZamowien
 {
     internal class Order
     {
