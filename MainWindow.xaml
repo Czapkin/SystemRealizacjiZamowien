@@ -13,7 +13,8 @@
     <Grid>
         <Button Content="Complete the order"  Click="CompleteTheOrderClick" HorizontalAlignment="Left" Height="81" Margin="610,360,0,0" VerticalAlignment="Top" Width="178"/>
         <Button Name="Remove" Content="Remove the order" HorizontalAlignment="Left" Height="81" Margin="420,360,0,0" VerticalAlignment="Top" Width="178"/>
-
+        <TextBox Name="SearchFor"  HorizontalAlignment="Left" Height="40" Margin="230,360,0,0" VerticalAlignment="Top" Width="178" ></TextBox>
+        <Button Name="Find" Content="Find the products" HorizontalAlignment="Left" Height="40" Margin="230,400,0,0" VerticalAlignment="Top" Width="178"/>
         <Label Name="LabelCash" Content="Cash to pay:" FontSize="14" Width="100" Margin="572,10,122,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <Label Name="Order" Content="Current order:" FontSize="14" Width="100" Margin="121,10,573,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <Label Name="CurrentOrder" Height="30" FontSize="14" Background="LightGray" Margin="121,53,222,348" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  BorderBrush="Black" BorderThickness="1"/>

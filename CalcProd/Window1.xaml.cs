@@ -78,6 +78,7 @@ namespace ProjektWPF
 
                 Order.productNames.Add(this.fullname);
                 Order.sub = 0;
+                mainWin.SearchFor.Text = "";
                 mainWin.Show();
                 Close();
             }
@@ -95,6 +96,7 @@ namespace ProjektWPF
            //Order.productPrices.Add(Order.sub);
 
            var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
+            mainWin.SearchFor.Text = "";
             mainWin.Show();
             Close();
         }

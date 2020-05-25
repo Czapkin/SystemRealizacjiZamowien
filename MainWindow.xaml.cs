@@ -74,6 +74,11 @@ namespace SystemRealizacjiZamowien
             loopThroughDataT(n[3], WholeSets);
             loopThroughDataT(n[4], WholeSnacks);
 
+            var wholeNames = new List<string>();
+            var wholePrices = new List<string>();
+            var wholeShort = new List<string>();
+
+
             int iteratorProductID = 0;
             int iteratorFullName = 1;
             int iteratorShortNames = 2;
@@ -81,6 +86,7 @@ namespace SystemRealizacjiZamowien
             int iteratorCallories = 4;
             int iteratorPrice = 5;
             int orderCount = 6;
+
 
             var dessertsNames = parseDataFromDataTable(iteratorShortNames, 7, WholeDesserts);
             var dessertsFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeDesserts);
@@ -102,6 +108,27 @@ namespace SystemRealizacjiZamowien
             var beveregesFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeBevereges);
             var beveregesCosts = parseDataFromDataTable(iteratorPrice, 7, WholeBevereges);
 
+
+            wholeNames.AddRange(parseDataFromDataTable(iteratorFullName, 7, WholeBevereges));
+            wholeNames.AddRange(parseDataFromDataTable(iteratorFullName, 7, WholeDesserts));
+            wholeNames.AddRange(parseDataFromDataTable(iteratorFullName, 7, WholeSandwiches));
+            wholeNames.AddRange(parseDataFromDataTable(iteratorFullName, 7, WholeSets));
+            wholeNames.AddRange(parseDataFromDataTable(iteratorFullName, 7, WholeSnacks));
+
+            wholePrices.AddRange(parseDataFromDataTable(iteratorPrice, 7, WholeBevereges));
+            wholePrices.AddRange(parseDataFromDataTable(iteratorPrice, 7, WholeDesserts));
+            wholePrices.AddRange(parseDataFromDataTable(iteratorPrice, 7, WholeSandwiches));
+            wholePrices.AddRange(parseDataFromDataTable(iteratorPrice, 7, WholeSets));
+            wholePrices.AddRange(parseDataFromDataTable(iteratorPrice, 7, WholeSnacks));
+
+            wholeShort.AddRange(parseDataFromDataTable(iteratorShortNames, 7, WholeBevereges));
+            wholeShort.AddRange(parseDataFromDataTable(iteratorShortNames, 7, WholeDesserts));
+            wholeShort.AddRange(parseDataFromDataTable(iteratorShortNames, 7, WholeSandwiches));
+            wholeShort.AddRange(parseDataFromDataTable(iteratorShortNames, 7, WholeSets));
+            wholeShort.AddRange(parseDataFromDataTable(iteratorShortNames, 7, WholeSnacks));
+
+
+
             var categoriesDisplay = parseDataFromDataTable(1, 2, listOfCategories);
 
             this.Logout.Click += new RoutedEventHandler(
@@ -116,6 +143,7 @@ namespace SystemRealizacjiZamowien
                 Login.Show();
                 Hide();
             });
+
 
             this.Remove.Background = Brushes.Tomato;
             this.Remove.Click += new RoutedEventHandler(
@@ -140,7 +168,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                onlyInstanceCat = new Categories(CashToPay, setsNames, setsCosts, setsFullNames);
+                onlyInstanceCat = new Categories(CashToPay, setsNames, setsCosts, setsFullNames,false);
                 onlyInstanceCat.Name = "Categories";
                 Hide();
             });
@@ -149,7 +177,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[1].Click += new RoutedEventHandler(
             (sendItem, args) =>
            {
-               onlyInstanceCat = new Categories(CashToPay, beveregesNames, beveregesCosts, beveregesFullNames);
+               onlyInstanceCat = new Categories(CashToPay, beveregesNames, beveregesCosts, beveregesFullNames,false);
                onlyInstanceCat.Name = "Categories";
                Hide();
            });
@@ -157,7 +185,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                onlyInstanceCat = new Categories(CashToPay, sandwichesNames, sandwichesCosts, sandwichesFullNames);
+                onlyInstanceCat = new Categories(CashToPay, sandwichesNames, sandwichesCosts, sandwichesFullNames,false);
                 onlyInstanceCat.Name = "Categories";
                 Hide();
             });
@@ -165,7 +193,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 onlyInstanceCat = new Categories(CashToPay, snacksNames, snacksCosts, snacksFullNames);
+                 onlyInstanceCat = new Categories(CashToPay, snacksNames, snacksCosts, snacksFullNames,false);
                  onlyInstanceCat.Name = "Categories";
                  Hide();
              });
@@ -174,10 +202,26 @@ namespace SystemRealizacjiZamowien
             categoryButto[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 onlyInstanceCat = new Categories(CashToPay, dessertsNames, dessertsCosts, dessertsFullNames);
+                 onlyInstanceCat = new Categories(CashToPay, dessertsNames, dessertsCosts, dessertsFullNames,false);
                  onlyInstanceCat.Name = "Categories";
                  Hide();
              });
+
+
+            this.Find.Background = Brushes.Aquamarine;
+            this.Find.Click += new RoutedEventHandler(
+            (sendItem, args) =>
+            {
+                if (this.SearchFor.Text != "")
+                {
+                    onlyInstanceCat = new Categories(CashToPay, wholeNames, wholePrices, wholeShort, true);
+                    onlyInstanceCat.Name = "Categories";
+                    Hide();
+                }
+
+            });
+
+
         }
         public void generateTextBlock()
         {
