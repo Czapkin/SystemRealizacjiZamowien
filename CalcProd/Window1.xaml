@@ -3,25 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProjektWPF"
+        Icon="/Sources/Main-window-icon.jpg"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Wprowadzanie ilości" Height="500" Width="400">
-    <Grid Background="#FFA5D184">
-        <TextBox x:Name="ilosc"  HorizontalAlignment="Left" Height="54" Margin="9,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" FontSize="36" TextAlignment="Right"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="165,124,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="271,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="56,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="165,194,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="271,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="56,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="165,265,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="271,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="CE" HorizontalAlignment="Left" Margin="56,338,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFDDDDDD" FontSize="16" Click="Clear_all"/>
-        <Button Content="0" HorizontalAlignment="Left" Margin="165,338,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="C" HorizontalAlignment="Left" Margin="271,338,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FFDDDDDD" Click="Clear"/>
-        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="56,396,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFE52525" FontSize="16"/>
-        <Button Content="Potwierdź" HorizontalAlignment="Left" Margin="271,396,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF5AD921" Click="potwierdz"/>
+    <Grid Background="LightGray">
+        <TextBox x:Name="ilosc"  HorizontalAlignment="Center" Height="54" Margin="5,20,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" FontSize="36" TextAlignment="Right"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="165,124,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="271,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="56,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="165,194,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="271,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="56,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="165,265,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="271,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="CE" HorizontalAlignment="Left" Margin="56,338,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFEBEBEB" FontSize="16" Click="Clear_all"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="165,338,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="C" HorizontalAlignment="Left" Margin="271,338,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FFEBEBEB" Click="Clear"/>
+        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="56,396,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFD92222" Click="close" FontSize="16"/>
+        <Button Content="Potwierdź" HorizontalAlignment="Left" Margin="271,396,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF57D922" Click="potwierdz"/>
 
+        <Label Name="ProductName" Content="" FontSize="20" Margin="56,60,44,345" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        
     </Grid>
 </Window>

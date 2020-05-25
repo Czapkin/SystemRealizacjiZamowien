@@ -110,3 +110,176 @@ C:\Users\Maciej\Desktop\SystemRealizacjiZamowien12\obj\Debug\WpfApp1.pdb
 C:\Users\Maciej\Desktop\SystemRealizacjiZamowien12\obj\Debug\CalcProd\Window1.g.cs
 C:\Users\Maciej\Desktop\SystemRealizacjiZamowien12\obj\Debug\WpfApp1_MarkupCompile.lref
 C:\Users\Maciej\Desktop\SystemRealizacjiZamowien12\obj\Debug\CalcProd\Window1.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe.config
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\WpfApp1.pdb
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\XamlAnimatedGif.dll
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\Google.Protobuf.dll
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\BouncyCastle.Crypto.dll
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\Ubiety.Dns.Core.dll
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\Renci.SshNet.dll
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\bin\Debug\MySql.Data.xml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csprojAssemblyReference.cache
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Categories.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\MainWindow.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Categories.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\MainWindow.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\App.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.baml
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\WpfApp1.g.resources
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.GenerateResource.cache
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CoreCompileInputs.cache
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CopyComplete
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\WpfApp1.exe
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\WpfApp1.pdb
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Login\Login.g.cs
+D:\Mati\Studia informatyka\4 semestr\inzynieria oprogramowania\Repo\SRZ\SystemRealizacjiZamowien\obj\Debug\Login\Login.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe.config
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\WpfApp1.pdb
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\MySql.Data.dll
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\XamlAnimatedGif.dll
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\Google.Protobuf.dll
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\Renci.SshNet.dll
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\bin\Debug\MySql.Data.xml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csprojAssemblyReference.cache
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Categories.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Login\Login.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\MainWindow.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.baml
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Categories.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Login\Login.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\MainWindow.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\App.g.cs
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\WpfApp1.g.resources
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.GenerateResource.cache
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CoreCompileInputs.cache
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CopyComplete
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\WpfApp1.exe
+C:\Users\Maciej\Desktop\najnowsze\SystemRealizacjiZamowien\obj\Debug\WpfApp1.pdb
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe.config
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\WpfApp1.pdb
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\XamlAnimatedGif.dll
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\Google.Protobuf.dll
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\Renci.SshNet.dll
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\bin\Debug\MySql.Data.xml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csprojAssemblyReference.cache
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Categories.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Login\Login.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\MainWindow.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Categories.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Login\Login.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\MainWindow.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\App.g.cs
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\WpfApp1.g.resources
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.GenerateResource.cache
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CoreCompileInputs.cache
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CopyComplete
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\WpfApp1.exe
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\WpfApp1.pdb
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Login\Register.baml
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\Login\Register.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe.config
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\WpfApp1.exe
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\WpfApp1.pdb
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\XamlAnimatedGif.dll
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\Google.Protobuf.dll
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\BouncyCastle.Crypto.dll
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\Ubiety.Dns.Core.dll
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\Renci.SshNet.dll
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\bin\Debug\MySql.Data.xml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csprojAssemblyReference.cache
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Categories.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Login\Login.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Login\Register.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\MainWindow.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.baml
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\CalcProd\Window1.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Categories.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Login\Login.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Login\Register.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Payment\ChoosePaymentMethod.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\MainWindow.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Payment\CardPayment.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\Payment\CashPayment.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\App.g.cs
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\WpfApp1.g.resources
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.GenerateResource.cache
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CoreCompileInputs.cache
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\SystemRealizacjiZamowien.csproj.CopyComplete
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\WpfApp1.exe
+D:\SystemRealizacjiZamowien\SystemRealizacjiZamowien\obj\Debug\WpfApp1.pdb
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\WpfApp1.exe.config
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\WpfApp1.exe
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\WpfApp1.pdb
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\MySql.Data.dll
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\XamlAnimatedGif.dll
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\Google.Protobuf.dll
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\Renci.SshNet.dll
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\bin\Debug\MySql.Data.xml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\SystemRealizacjiZamowien.csprojAssemblyReference.cache
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\CalcProd\Window1.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Categories.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Login\Login.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Login\Register.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Payment\ChoosePaymentMethod.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\MainWindow.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Payment\CardPayment.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Payment\CashPayment.baml
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\CalcProd\Window1.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Categories.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Login\Login.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Login\Register.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Payment\ChoosePaymentMethod.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\MainWindow.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Payment\CardPayment.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\Payment\CashPayment.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\App.g.cs
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\WpfApp1.g.resources
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\SystemRealizacjiZamowien.csproj.GenerateResource.cache
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\SystemRealizacjiZamowien.csproj.CoreCompileInputs.cache
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\SystemRealizacjiZamowien.csproj.CopyComplete
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\WpfApp1.exe
+C:\Users\Maciej\Desktop\Projekt\SystemRealizacjiZamowien2\obj\Debug\WpfApp1.pdb

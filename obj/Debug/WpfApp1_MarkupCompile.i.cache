@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Maciej\Desktop\SystemRealizacjiZamowien12\obj\Debug\
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\Maciej\Desktop\SystemRealizacjiZamowien12\App.xaml
-6-1861910377
+C:\Users\Mati\Desktop\SystemRealizacjiZamowien\App.xaml
+8-329106877
 
-15405922093
-15448575454
-CalcProd\Window1.xaml;Categories.xaml;Payment\ChoosePaymentMethod.xaml;MainWindow.xaml;Payment\CardPayment.xaml;Payment\CashPayment.xaml;
+181904332439
+15-1367870143
+CalcProd\Window1.xaml;Categories.xaml;Login\Login.xaml;Login\Register.xaml;Payment\ChoosePaymentMethod.xaml;MainWindow.xaml;Payment\CardPayment.xaml;Payment\CashPayment.xaml;
 
 False
 

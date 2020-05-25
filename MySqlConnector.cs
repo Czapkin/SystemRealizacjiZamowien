@@ -8,7 +8,7 @@ namespace SystemRealizacjiZamowien
 {
     public class MySqlConnector {
         
-        readonly MySqlConnection databaseCon;
+        readonly public MySqlConnection databaseCon; //Zmiana na public
         readonly string inputToConnect;
         static bool connectionIndicator;
 

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Threading;
+using Paragon;
 
 //-------------------------------------PLATNOSC KARTA-------------------------------------------
 
@@ -57,10 +58,14 @@ namespace SystemRealizacjiZamowien
                 timer.Tick += (y, argz) =>
                 {
                     timer.Stop();
-                    Close();
                     Application.Current.MainWindow.Show();
+                    Close();
                     Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "ChoosePaymentMethod");
                     win.Close();
+
+                    Order.totalToPay = double.Parse(cashToPay);
+                    Program.logging(false);   // FALSE TO KARTA
+
                     var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
                     mainWin.CashToPay.Content = "0,00";
                     mainWin.CurrentOrder.Content = "";
@@ -72,9 +77,9 @@ namespace SystemRealizacjiZamowien
 
         private void CloseCashPaymentWindow(object sender, RoutedEventArgs e)
         {
-            Close();
             Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "ChoosePaymentMethod");
             win.Show();
+            Close();
         }
     }
 }

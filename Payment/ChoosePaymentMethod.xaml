@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="ChoosePaymentMethod" Height="500" Width="500" Background="LightGreen"
+        Icon="/Sources/Main-window-icon.jpg"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Height="50" Width="250" Content="Choose your pay mean" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-300,0,0" FontSize="23"></Label>

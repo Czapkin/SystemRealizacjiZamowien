@@ -4,26 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        Icon="/Sources/Main-window-icon.jpg"        
         Title="Cash Payment" Height="600" Width="400"
         WindowStartupLocation="CenterScreen">
-    <Grid Background="#FFA5D184">
+    <Grid Background="LightGray">
         <TextBox x:Name="zaplacone"  HorizontalAlignment="Left" Height="37" Margin="105,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" FontSize="20" TextAlignment="Right"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="55,166,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="164,166,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="270,166,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="55,236,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="164,236,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="270,236,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="55,307,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="164,307,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="270,307,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="CE" HorizontalAlignment="Left" Margin="55,380,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFDDDDDD" FontSize="16" Click="Clear_all"/>
-        <Button Content="0" HorizontalAlignment="Left" Margin="164,380,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra"/>
-        <Button Content="C" HorizontalAlignment="Left" Margin="270,380,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FFDDDDDD" Click="Clear"/>
-        <Button Content="," HorizontalAlignment="Left" Margin="164,453,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" />
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="55,453,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFE52525" FontSize="16" Click="anuluj"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="270,453,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF5AD921" Click="potwierdz"/>
-        <Button Content="Counted Cash" HorizontalAlignment="Left" Margin="80,520,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="20" Click="CountedCashClick"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="55,166,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="164,166,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="270,166,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="55,236,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="164,236,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="270,236,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="55,307,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="164,307,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="270,307,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="CE" HorizontalAlignment="Left" Margin="55,380,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFEBEBEB" FontSize="16" Click="Clear_all"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="164,380,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
+        <Button Content="C" HorizontalAlignment="Left" Margin="270,380,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FFEBEBEB" Click="Clear"/>
+        <Button Content="," HorizontalAlignment="Left" Margin="164,453,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB" />
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="55,453,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFD92222" FontSize="16" Click="anuluj"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="270,453,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF57D922" Click="potwierdz"/>
+        <Button Content="Counted Cash" HorizontalAlignment="Left" Margin="80,520,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="20" Click="CountedCashClick" Background="#FFEBEBEB"/>
         <TextBox x:Name="do_zaplaty"  HorizontalAlignment="Left" Height="37" Margin="105,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" FontSize="20" TextAlignment="Right"/>
         <TextBox x:Name="change"  HorizontalAlignment="Left" Height="37" Margin="105,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" FontSize="20" TextAlignment="Right"/>
         <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>

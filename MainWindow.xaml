@@ -13,9 +13,12 @@
         <Button Content="Complete the order" Click="CompleteTheOrderClick" HorizontalAlignment="Left" Height="81" Margin="610,360,0,0" VerticalAlignment="Top" Width="178"/>
         <Label Name="LabelCash" Content="Cash to pay:" FontSize="14" Width="100" Margin="572,10,122,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <Label Name="Order" Content="Current order:" FontSize="14" Width="100" Margin="121,10,573,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <Label Name="CurrentOrder" Height="27" FontSize="14" Background="LightGray" Margin="121,53,222,348" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  BorderBrush="Black" BorderThickness="1"/>
-        <Label Name="CashToPay" FontSize="14" Height="27" Background="LightGray" Content="0,00" Width="100" Margin="572,53,122,348" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="1"/>
+        <Label Name="CurrentOrder" Height="30" FontSize="14" Background="LightGray" Margin="121,53,222,348" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  BorderBrush="Black" BorderThickness="1"/>
+        <Label Name="CashToPay" FontSize="14" Height="30" Background="LightGray" Content="0,00" Width="100" Margin="572,53,122,348" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="1"/>
+        <Label Name="User" FontSize="14" Height="30" Margin="10, 340,0,0" Content="Logged as: "></Label>
+        <Button Name="Logout" HorizontalContentAlignment="Center" Height="25" Width="110" Margin="-665, 390,0,0" Content="Loggout" ></Button>
         <Button Click="ExitProgram" Content="Quit" HorizontalContentAlignment="Center" Height="25" Width="70" Margin="705,5,25,365"/>
+        <Button Click="RegisterNewEmployee" Name="RegisterBtn" Height="25" Width="70" Margin="705,55,25,365" Content="Register" Visibility="Hidden"></Button>
         <Border BorderBrush="DimGray" BorderThickness="3">
             <UniformGrid x:Name="grid" Background="LightGray" Margin="121,100,121,109"/>
         </Border>

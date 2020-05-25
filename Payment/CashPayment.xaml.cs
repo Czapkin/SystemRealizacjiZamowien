@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using Paragon;
 
 //-------------------------------------PLATNOSC FIZYCZNYM PIENIADZEM-------------------------------------------
 
@@ -30,6 +31,7 @@ namespace SystemRealizacjiZamowien
             do_zaplaty.Text = cashToPay.ToString();
             do_wydania = Convert.ToDouble(value: gotowka) - cashToPay;
             change.Text = do_wydania.ToString();
+            
         }
 
         private void Cyfra(object sender, RoutedEventArgs e)
@@ -109,20 +111,33 @@ namespace SystemRealizacjiZamowien
                 {
                     throw new ArgumentException();
                 }
-                Close();
-                Application.Current.MainWindow.Show();
-                Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "ChoosePaymentMethod");
-                win.Close();
-                kasa = Convert.ToDouble(gotowka);
-                var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
-                mainWin.CashToPay.Content = "0,00";
-                mainWin.CurrentOrder.Content = "";
-                Order.total = 0;
+
+                MessageBoxResult result = MessageBox.Show("Do you want to finalize the order?", "Warning", MessageBoxButton.YesNo);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        Application.Current.MainWindow.Show();
+                        Close();
+                        Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "ChoosePaymentMethod");
+                        win.Close();
+                        kasa = Convert.ToDouble(gotowka);
+                        var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
+                        mainWin.CashToPay.Content = "0,00";
+                        mainWin.CurrentOrder.Content = "";
+                        Order.change = do_wydania;
+                        Order.userMoney = kasa;
+                        Order.totalToPay = cashToPay;
+                        Program.logging(true);   // TRUE TO GOTOWKA
+                        Order.total = 0;
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                }
             }
             catch (ArgumentException)
             {
                 MessageBox.Show("Change must be greater or equal 0\nCurrent change value is: " + do_wydania);
-            }
+            }      
 
         }
 
@@ -135,6 +150,8 @@ namespace SystemRealizacjiZamowien
 
         private void CountedCashClick(object sender, RoutedEventArgs e)
         {
+            Order.totalToPay = cashToPay;
+            Order.change = 0;
             gotowka = cashToPay.ToString();
             zaplacone.Text = gotowka;
             do_wydania = cashToPay - Convert.ToDouble(value: gotowka);

@@ -5,7 +5,7 @@ using System.Data;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Linq;
-
+using System.Windows.Media.Imaging;
 
 namespace SystemRealizacjiZamowien
 {
@@ -15,14 +15,17 @@ namespace SystemRealizacjiZamowien
         public double to_Pay = 0;
         public static Window onlyInstance;
         public static Window onlyInstanceCat;
-       
+        public static string employeePosition;
+        public static string loginString = "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=";
+
         public MainWindow()
         {
             InitializeComponent();
             WindowStyle = WindowStyle.None;
+            Hide();
 
-            string loginString =
-                "SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=";
+            //string loginString =
+                //"SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=";
 
             MySqlConnector mysql = new MySqlConnector(loginString);
 
@@ -30,6 +33,11 @@ namespace SystemRealizacjiZamowien
             {
                 mysql = tryToConnectAgain(mysql,loginString);
             }
+
+            //-------------------------------------OKNO LOGOWANIA-------------------------------------------
+            Login loginWindow = new Login(mysql); 
+            loginWindow.Show(); 
+            //-------------------------------------OKNO LOGOWANIA-------------------------------------------
 
             const byte numOfFoodCategories = 5;
 
@@ -75,21 +83,35 @@ namespace SystemRealizacjiZamowien
             int orderCount = 6;
 
             var dessertsNames = parseDataFromDataTable(iteratorShortNames, 7, WholeDesserts);
+            var dessertsFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeDesserts);
             var dessertsCosts = parseDataFromDataTable(iteratorPrice, 7, WholeDesserts);
             
             var sandwichesNames = parseDataFromDataTable(iteratorShortNames, 7, WholeSandwiches);
+            var sandwichesFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeSandwiches);
             var sandwichesCosts = parseDataFromDataTable(iteratorPrice , 7, WholeSandwiches);
 
             var setsNames = parseDataFromDataTable(iteratorShortNames, 7, WholeSets);
+            var setsFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeSets);
             var setsCosts = parseDataFromDataTable(iteratorPrice, 7, WholeSets);
             
             var snacksNames = parseDataFromDataTable(iteratorShortNames, 7, WholeSnacks);
+            var snacksFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeSnacks);
             var snacksCosts = parseDataFromDataTable(iteratorPrice, 7, WholeSnacks);
             
             var beveregesNames = parseDataFromDataTable(iteratorShortNames, 7, WholeBevereges);
+            var beveregesFullNames = parseDataFromDataTable(iteratorFullName, 7, WholeBevereges);
             var beveregesCosts = parseDataFromDataTable(iteratorPrice, 7, WholeBevereges);
 
             var categoriesDisplay = parseDataFromDataTable(1, 2, listOfCategories);
+
+            this.Logout.Click += new RoutedEventHandler(
+            (sendItem, args) =>
+            {
+                var Login = new Login(mysql);
+                SystemRealizacjiZamowien.Order.user = "";
+                Login.Show();
+                Hide();
+            });
 
 
             categoryButton[] categoryButto = new categoryButton[categoriesDisplay.Count];
@@ -104,7 +126,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                onlyInstanceCat = new Categories(CashToPay, setsNames, setsCosts);
+                onlyInstanceCat = new Categories(CashToPay, setsNames, setsCosts, setsFullNames);
                 onlyInstanceCat.Name = "Categories";
                 Hide();
             });
@@ -113,7 +135,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[1].Click += new RoutedEventHandler(
             (sendItem, args) =>
            {
-               onlyInstanceCat = new Categories(CashToPay, beveregesNames, beveregesCosts);
+               onlyInstanceCat = new Categories(CashToPay, beveregesNames, beveregesCosts, beveregesFullNames);
                onlyInstanceCat.Name = "Categories";
                Hide();
            });
@@ -121,7 +143,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
-                onlyInstanceCat = new Categories(CashToPay, sandwichesNames, sandwichesCosts);
+                onlyInstanceCat = new Categories(CashToPay, sandwichesNames, sandwichesCosts, sandwichesFullNames);
                 onlyInstanceCat.Name = "Categories";
                 Hide();
             });
@@ -129,7 +151,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 onlyInstanceCat = new Categories(CashToPay, snacksNames, snacksCosts);
+                 onlyInstanceCat = new Categories(CashToPay, snacksNames, snacksCosts, snacksFullNames);
                  onlyInstanceCat.Name = "Categories";
                  Hide();
              });
@@ -138,7 +160,7 @@ namespace SystemRealizacjiZamowien
             categoryButto[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
-                 onlyInstanceCat = new Categories(CashToPay, dessertsNames, dessertsCosts);
+                 onlyInstanceCat = new Categories(CashToPay, dessertsNames, dessertsCosts, dessertsFullNames);
                  onlyInstanceCat.Name = "Categories";
                  Hide();
              });
@@ -161,14 +183,14 @@ namespace SystemRealizacjiZamowien
                     throw new ArgumentException();
                 }
 
-                Hide();
                 onlyInstance = new ChoosePaymentMethod();
                 onlyInstance.Name = "ChoosePaymentMethod";
                 onlyInstance.Show();
+                Hide();
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Atleast one product must be selected");
+                MessageBox.Show("At least one product must be selected");
             }
         }
 
@@ -179,7 +201,7 @@ namespace SystemRealizacjiZamowien
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    Close();
+                    Application.Current.Shutdown();
                     break;
                 case MessageBoxResult.No:
                     break;
@@ -199,7 +221,7 @@ namespace SystemRealizacjiZamowien
         }
 
         //-------------------------------------PARSING DANYCH Z BD DO LISTY-------------------------------------------
-        public void loopThroughDataT(DataTable element, List<string> lista)
+        static public void loopThroughDataT(DataTable element, List<string> lista)
         {
             foreach (DataRow dbRow in element.Rows)
             {
@@ -236,7 +258,13 @@ namespace SystemRealizacjiZamowien
             return mysql;
         }
 
+        private void RegisterNewEmployee(object sender, RoutedEventArgs e)
+        {
+            var registerWindow = new Register();
+            registerWindow.Show();
+            Hide();
 
+        }
     }
 }
 

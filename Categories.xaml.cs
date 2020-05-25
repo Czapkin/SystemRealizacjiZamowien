@@ -13,10 +13,10 @@ namespace SystemRealizacjiZamowien
     public partial class Categories : Window
     {
         public static Window onlyInstance;
-        public Categories(Label label,List<string> productNames, List<string> productPrices)
+        public Categories(Label label,List<string> productNames, List<string> productPrices, List<string> fullname)
         {
             InitializeComponent();
-            windowLoaded(label,productNames, productPrices);
+            windowLoaded(label,productNames, productPrices,fullname);
             Show();
             WindowStyle = WindowStyle.None;
         }
@@ -30,7 +30,7 @@ namespace SystemRealizacjiZamowien
 
         //-------------------------------------INICJUJE OKIENKA Z PRODUKTAMI I PRZYCISK BACK-------------------------------------------
 
-        public void windowLoaded(Label label,List<string> productNames, List<string> productPrices)
+        public void windowLoaded(Label label,List<string> productNames, List<string> productPrices, List<string>fullname)
         {
 
             itemButton [] itemButto = new itemButton[productNames.Count];
@@ -42,17 +42,16 @@ namespace SystemRealizacjiZamowien
             retBtn.Click += new RoutedEventHandler(
             (sendIte, arg) =>
             {
-                this.Close();
-                label.Content = Order.total.ToString();
                 var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
                 mainWin.Show();
-                //onlyInstance.Show();
+                Close();
+                label.Content = Order.total.ToString();
             });
 
             for (int z = productNames.Count - 1; z >= 0; --z)
             {
 
-                itemButto[z] = new itemButton(productNames[z], productPrices[z]);
+                itemButto[z] = new itemButton(productNames[z], productPrices[z], fullname[z]);
                 itemButto[z].Tag = productPrices[z];
 
                 itemButto[z].Click += new RoutedEventHandler(
@@ -63,14 +62,16 @@ namespace SystemRealizacjiZamowien
                     
                     string productName = (string)(sendIte as itemButton).name;
                     string stringPrice = (string)(sendIte as itemButton).Tag;
+                    string fullName = (string)(sendIte as itemButton).fullName;
                     //string final = amountOfProd + " " + productName;
 
                     Order.price = Double.Parse(stringPrice);
-                    Hide();
-                    onlyInstance = new Window1(label,productName);
+                    Order.name = productName;
+                    //Order.productNames.Add(fullName);
+                    onlyInstance = new Window1(label,productName,fullName);
                     onlyInstance.Name = "CalculateOrder";
                     onlyInstance.Show();
-
+                    Hide();
                     Console.WriteLine(string.Format("The price of the selected product is:  {0}.", (sendIte as itemButton).Tag));
                 });
 

@@ -9,17 +9,20 @@ namespace SystemRealizacjiZamowien
     {
         public string name;
         public string price;
+        public string fullName;
 
-        public itemButton(string name, string price)
+        public itemButton(string name, string price, string fullName)
         {
             this.name = name;
             this.price = price;
+            this.fullName = fullName;
             setContent(this.name);
         }
 
-        public int getPrice()
+        public double getPrice()
         {
-            return Int32.Parse(Convert.ToString(price));
+            //return Double.Parse(Convert.ToString(price));
+            return Double.Parse(price);
         }
 
         public void setContent(string name)
