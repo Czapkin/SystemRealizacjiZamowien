@@ -86,10 +86,7 @@ namespace ProjektWPF
         }
 
         private void close(object sender, RoutedEventArgs e)
-        {
-
-            
-            
+        {      
             //Order.amountOfProd.RemoveAt(Order.amountOfProd.Count - 1);
             //Order.productPrices.RemoveAt(Order.productPrices.Count - 1);
             //Order.amountOfProd.RemoveAt(Order.amountOfProd.Count - 1);

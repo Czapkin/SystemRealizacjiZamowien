@@ -16,8 +16,8 @@
             <TextBox Name="txtUsername" Background="white" Foreground="Black" FontSize="18" Margin="0,0,-0.4,0"/>
             <Label Content="Password:" Foreground="White"/>
             <PasswordBox Name="txtPassword" Background="White" Foreground="Black" FontSize="18"/>
-            <Button Name="btnZaloguj" Click="btnZaloguj_Click" Content="Log in" Margin="60 10" Background="LightGray" Foreground="Black" FontSize="18"/>
-            <Button Click="ExitProgram" Content="X" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Width="25" Margin="140,-205,-39,365"/>
+            <Button Name="btnZaloguj" Click="btnZaloguj_Click"  IsDefault="True" Content="Log in" Margin="60 10" Background="LightGray" Foreground="Black" FontSize="18"/>
+            <Button Click="ExitProgram" IsCancel ="True" Content="X" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Width="25" Margin="140,-205,-39,365"/>
         </StackPanel>
     </Border>
 </Window>

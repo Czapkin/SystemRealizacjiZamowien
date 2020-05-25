@@ -23,7 +23,7 @@ namespace SystemRealizacjiZamowien
             InitializeComponent();
             WindowStyle = WindowStyle.None;
             Hide();
-
+            
             //string loginString =
                 //"SERVER=localhost;DATABASE=db_system_realizacji_zamowien_posilkow_21042020;UID=root;PASSWORD=";
 
@@ -109,10 +109,24 @@ namespace SystemRealizacjiZamowien
             {
                 var Login = new Login(mysql);
                 SystemRealizacjiZamowien.Order.user = "";
+                if (SystemRealizacjiZamowien.Order.productNames.Count > 0)
+                {
+                    ResetEverything();
+                }
                 Login.Show();
                 Hide();
             });
 
+            this.Remove.Background = Brushes.Tomato;
+            this.Remove.Click += new RoutedEventHandler(
+            (sendItem, args) =>
+            {
+                if (SystemRealizacjiZamowien.Order.productNames.Count > 0)
+                {
+                    ResetEverything();
+                }
+            
+            });
 
             categoryButton[] categoryButto = new categoryButton[categoriesDisplay.Count];
 
@@ -175,6 +189,7 @@ namespace SystemRealizacjiZamowien
         {
             var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
             var cashToPay = Convert.ToDouble(mainWin.CashToPay.Content);
+            
 
             try
             {
@@ -195,6 +210,7 @@ namespace SystemRealizacjiZamowien
         }
 
         //-------------------------------------WYJSCIE Z PROGRAMU-------------------------------------------
+
         private void ExitProgram(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you really want to close the application?", "Warning", MessageBoxButton.YesNo);
@@ -256,6 +272,23 @@ namespace SystemRealizacjiZamowien
                 }
             }
             return mysql;
+        }
+
+        public static void ResetEverything()
+        {
+            var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
+
+            SystemRealizacjiZamowien.Order.totalToPay = 0;
+            SystemRealizacjiZamowien.Order.productNames.RemoveAt(SystemRealizacjiZamowien.Order.productNames.Count - 1);
+            SystemRealizacjiZamowien.Order.amountOfProd.RemoveAt(SystemRealizacjiZamowien.Order.amountOfProd.Count - 1);
+            SystemRealizacjiZamowien.Order.productPrices.RemoveAt(SystemRealizacjiZamowien.Order.productPrices.Count - 1);
+            mainWin.CashToPay.Content = "0,00";
+            mainWin.CurrentOrder.Content = "";
+
+            SystemRealizacjiZamowien.Order.total = 0;
+            SystemRealizacjiZamowien.Order.totalToPay = 0;
+            SystemRealizacjiZamowien.Order.sub = 0;
+
         }
 
         private void RegisterNewEmployee(object sender, RoutedEventArgs e)

@@ -45,7 +45,6 @@ namespace SystemRealizacjiZamowien
                 var Users = new List<string>(); // znajduja sie tu wszystkie elementy z bazy danych(cena, nazwa itd)
                 loopThroughDataT(n1, Users);
 
-
                 for (int i = 0; i < Users.Count; i += 2)
                 {
                     if (txtUsername.Text == Users[i])
