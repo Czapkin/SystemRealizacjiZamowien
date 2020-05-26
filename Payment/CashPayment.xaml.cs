@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using WpfApp1.Logs;
 using Paragon;
 
 //-------------------------------------PLATNOSC FIZYCZNYM PIENIADZEM-------------------------------------------
@@ -127,6 +128,7 @@ namespace SystemRealizacjiZamowien
                         Order.change = do_wydania;
                         Order.userMoney = kasa;
                         Order.totalToPay = cashToPay;
+                        Logs.logi(true);
                         Program.logging(true);   // TRUE TO GOTOWKA
                         Order.total = 0;
                         break;

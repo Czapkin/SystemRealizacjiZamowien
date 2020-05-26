@@ -62,6 +62,7 @@
     <Compile Include="Login\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logs\logs.cs" />
     <Compile Include="Receipt\Program.cs" />
     <Page Include="CalcProd\Window1.xaml">
       <Generator>MSBuild:Compile</Generator>

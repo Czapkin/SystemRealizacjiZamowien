@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Threading;
 using Paragon;
+using WpfApp1.Logs;
 
 //-------------------------------------PLATNOSC KARTA-------------------------------------------
 
@@ -64,6 +65,7 @@ namespace SystemRealizacjiZamowien
                     win.Close();
 
                     Order.totalToPay = double.Parse(cashToPay);
+                    Logs.logi(false);
                     Program.logging(false);   // FALSE TO KARTA
 
                     var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
