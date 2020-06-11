@@ -8,7 +8,7 @@
         Title="Categories" Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Background="WhiteSmoke">
+        Background="#2e3137">
     <UniformGrid x:Name="grid">
 
     </UniformGrid>

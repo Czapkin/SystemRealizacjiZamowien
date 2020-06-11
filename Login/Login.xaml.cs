@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Media;
 using MySql.Data.MySqlClient;
 
 namespace SystemRealizacjiZamowien
@@ -100,7 +102,7 @@ namespace SystemRealizacjiZamowien
             }
         }
 
-        private void ExitProgram(object sender, RoutedEventArgs e)
+        private void ExitProgram(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you really want to close the application?", "Warning", MessageBoxButton.YesNo);
             switch (result)
@@ -110,6 +112,23 @@ namespace SystemRealizacjiZamowien
                     break;
                 case MessageBoxResult.No:
                     break;
+            }
+        }
+
+        private void closeApp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            try
+            {
+                var response = MessageBox.Show("Do you really want to close the application?", "Warning", MessageBoxButton.YesNo);
+                if (response == MessageBoxResult.Yes)
+                {
+                    Application.Current.Shutdown();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -4,22 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="ChoosePaymentMethod" Height="500" Width="500" Background="LightGreen"
+        Title="ChoosePaymentMethod" Height="500" Width="500" Background="#2e3137"
         Icon="/Sources/Main-window-icon.jpg"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Height="50" Width="250" Content="Choose your pay mean" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-300,0,0" FontSize="23"></Label>
-        <Label Height="50" Width="100" Content="Card" Margin="-250,240,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
-        <Button Click="ButtonClickCloseCurrentWindow" HorizontalAlignment="Left" Content="Back" VerticalAlignment="Center" Width="75" Height="40" Margin="50,406,0,23"/>
-        <Button Click="ButtonClickOpenCardPaymentWindow" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="150" Margin="50,0,0,0">
+        <Label Height="50" Width="250" Content="Choose your pay mean" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-300,0,0" FontSize="23" Foreground="White"></Label>
+        <Label Height="50" Width="100" Content="Card" Margin="-250,240,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="White"></Label>
+        <Button Click="ButtonClickCloseCurrentWindow" HorizontalAlignment="Left" Content="Back" VerticalAlignment="Center" Width="75" Height="40" Margin="50,406,0,23" Background="#545d6a" Foreground="White"/>
+        <Button Click="ButtonClickOpenCardPaymentWindow" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="150" Margin="50,0,0,0" Background="#FF008080">
             <Image>
             <Image.Source>
                 <BitmapImage DecodePixelWidth="300" UriSource="/Sources/credit-card-348720_1280.png"></BitmapImage>
             </Image.Source>
             </Image>
         </Button>
-        <Label Height="50" Width="100" Content="Cash" Margin="270,240,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
-        <Button Click="ButtonClickOpenCashPaymentWindow" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="150" Margin="300,0,0,0">
+        <Label Height="50" Width="100" Content="Cash" Margin="270,240,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="White"></Label>
+        <Button Click="ButtonClickOpenCashPaymentWindow" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="150" Margin="300,0,0,0" Background="#FF008080">
             <Image>
                 <Image.Source>
                     <BitmapImage DecodePixelWidth="300" UriSource="/Sources/Cash-icon.png"></BitmapImage>

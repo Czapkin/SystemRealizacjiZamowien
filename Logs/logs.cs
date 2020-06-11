@@ -25,9 +25,9 @@ namespace WpfApp1.Logs
 
             for (int ctr = 0; ctr < Order.productNames.Count; ctr++)
             {
-                sw.Write(Order.productNames[ctr] + " " + Order.amountOfProd[ctr] + "x " + Order.price + ", " );
+                sw.Write(Order.productNames[ctr] + " " + Order.amountOfProd[ctr] + "x " + (Order.productPrices[ctr] / Order.amountOfProd[ctr]).ToString() + ", " );
             }
-
+            // Order.productPrices[ctr]
             if (cashorcard)
             {
                 sw.Write("] -- [Payment: Cash] -- ");

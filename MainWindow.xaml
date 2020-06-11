@@ -8,23 +8,23 @@
         Title="System Realizacji Zamowien" Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Background="WhiteSmoke">
+        Background="#2e3137">
 
     <Grid>
-        <Button Content="Complete the order"  Click="CompleteTheOrderClick" HorizontalAlignment="Left" Height="81" Margin="610,360,0,0" VerticalAlignment="Top" Width="178"/>
-        <Button Name="Remove" Content="Remove the order" HorizontalAlignment="Left" Height="81" Margin="420,360,0,0" VerticalAlignment="Top" Width="178"/>
-        <TextBox Name="SearchFor"  HorizontalAlignment="Left" Height="40" Margin="230,360,0,0" VerticalAlignment="Top" Width="178" ></TextBox>
-        <Button Name="Find" Content="Find the products" HorizontalAlignment="Left" Height="40" Margin="230,400,0,0" VerticalAlignment="Top" Width="178"/>
-        <Label Name="LabelCash" Content="Cash to pay:" FontSize="14" Width="100" Margin="572,10,122,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <Label Name="Order" Content="Current order:" FontSize="14" Width="100" Margin="121,10,573,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Button Content="Complete the order" Background="#545d6a" Foreground="White" Click="CompleteTheOrderClick" HorizontalAlignment="Left" Height="81" Margin="610,360,0,0" VerticalAlignment="Top" Width="178"/>
+        <Button Name="Remove" Content="Remove the order" Foreground="White" HorizontalAlignment="Left" Height="81" Margin="420,360,0,0" VerticalAlignment="Top" Width="178"/>
+        <TextBox Name="SearchFor" Background="#545d6a" Foreground="White" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="40" Margin="230,360,0,0" VerticalAlignment="Top" Width="178" FontSize="20" ></TextBox>
+        <Button Name="Find" Content="Find the products" Foreground="White" HorizontalAlignment="Left" Height="40" Margin="230,400,0,0" VerticalAlignment="Top" Width="178"/>
+        <Label Name="LabelCash" Content="Cash to pay:" Foreground="White" FontSize="14" Width="100" Margin="572,10,122,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Label Name="Order" Content="Current order:" Foreground="White" FontSize="14" Width="100" Margin="121,10,573,378" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <Label Name="CurrentOrder" Height="30" FontSize="14" Background="LightGray" Margin="121,53,222,348" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  BorderBrush="Black" BorderThickness="1"/>
         <Label Name="CashToPay" FontSize="14" Height="30" Background="LightGray" Content="0,00" Width="100" Margin="572,53,122,348" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="1"/>
-        <Label Name="User" HorizontalContentAlignment="Left" FontSize="14" Height="30" Margin="10, 340,500,0" Content="Logged as: "></Label>
-        <Button Name="Logout" HorizontalContentAlignment="Center" IsCancel ="True"  Height="25" Width="110" Margin="-665, 390,0,0" Content="Loggout" ></Button>
-        <Button Click="ExitProgram" Content="Quit" HorizontalContentAlignment="Center" Height="25" Width="70" Margin="705,5,25,365"/>
-        <Button Click="RegisterNewEmployee" Name="RegisterBtn" Height="25" Width="70" Margin="705,55,25,365" Content="Register" Visibility="Hidden"></Button>
+        <Label Name="User" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Height="30" Margin="10, 340,500,0" Content="Logged as: "></Label>
+        <Button Name="Logout" Background="#545d6a" Foreground="White" HorizontalContentAlignment="Center" IsCancel ="True"  Height="25" Width="110" Margin="-665, 390,0,0" Content="Logout" ></Button>
+        <Button Click="ExitProgram" Content="Quit" Background="#545d6a" Foreground="White" HorizontalContentAlignment="Center" Height="25" Width="70" Margin="705,5,25,365"/>
+        <Button Click="RegisterNewEmployee" Name="RegisterBtn" Background="#545d6a" Foreground="White" Height="25" Width="70" Margin="705,55,25,365" Content="Register" Visibility="Hidden"></Button>
         <Border BorderBrush="DimGray" BorderThickness="3">
-            <UniformGrid x:Name="grid" Background="LightGray" Margin="121,100,121,109"/>
+            <UniformGrid x:Name="grid" Background="#545d6a" Margin="121,100,121,109"/>
         </Border>
     </Grid>
 </Window>

@@ -71,6 +71,7 @@ namespace SystemRealizacjiZamowien
                     var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
                     mainWin.CashToPay.Content = "0,00";
                     mainWin.CurrentOrder.Content = "";
+                    SystemRealizacjiZamowien.Order.accounts.Clear();
                     Order.total = 0;
                 };
             };

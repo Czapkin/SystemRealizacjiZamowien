@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Icon="/Sources/Main-window-icon.jpg"
-        Title="Login" Height="319" Width="300" FontSize="14" Background="Gray"
+        Title="Login" Height="330" Width="300" FontSize="14" Background="#545d6a"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
-    <Border Background="#2e3137" Margin="20">
+    <Border Background="#2e3137" CornerRadius="15" Margin="20">
         <StackPanel Margin="20">
+            <Ellipse Name="exitButton" Fill="#FFFF6347" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,-0.4,0" MouseLeftButtonDown="closeApp" ToolTip="Exit" Cursor="Hand"/>
             <Label Content="Log-in" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
-            <Separator></Separator>
+            <Separator/>
             <Label Content="Username:" Foreground="White"/>
-            <TextBox Name="txtUsername" Background="white" Foreground="Black" FontSize="18" Margin="0,0,-0.4,0"/>
+            <TextBox x:Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18" Margin="0,0,-0.4,0"/>
             <Label Content="Password:" Foreground="White"/>
-            <PasswordBox Name="txtPassword" Background="White" Foreground="Black" FontSize="18"/>
-            <Button Name="btnZaloguj" Click="btnZaloguj_Click"  IsDefault="True" Content="Log in" Margin="60 10" Background="LightGray" Foreground="Black" FontSize="18"/>
-            <Button Click="ExitProgram" IsCancel ="True" Content="X" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Width="25" Margin="140,-205,-39,365"/>
+            <PasswordBox x:Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18"/>
+            <Button x:Name="btnZaloguj" Click="btnZaloguj_Click"  IsDefault="True" Content="Log in" Margin="60 15" Background="#545d6a" Foreground="White" FontSize="18"/>
         </StackPanel>
     </Border>
 </Window>

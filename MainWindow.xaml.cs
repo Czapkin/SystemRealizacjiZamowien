@@ -151,9 +151,16 @@ namespace SystemRealizacjiZamowien
             {
                 if (SystemRealizacjiZamowien.Order.productNames.Count > 0)
                 {
-                    ResetEverything();
+                    MessageBoxResult result = MessageBox.Show("Do you really want to reset the order?", "Warning", MessageBoxButton.YesNo);
+                    switch (result)
+                    {
+                        case MessageBoxResult.Yes:
+                        ResetEverything();
+                            break;
+                        case MessageBoxResult.No:
+                            break;
+                    }
                 }
-            
             });
 
             categoryButton[] categoryButto = new categoryButton[categoriesDisplay.Count];
@@ -164,7 +171,8 @@ namespace SystemRealizacjiZamowien
                 grid.Children.Add(categoryButto[q]);
             }
 
-            categoryButto[0].Background = Brushes.LawnGreen;
+            categoryButto[0].Background = Brushes.SeaGreen;
+            categoryButto[0].Foreground = Brushes.White;
             categoryButto[0].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
@@ -173,7 +181,8 @@ namespace SystemRealizacjiZamowien
                 Hide();
             });
 
-            categoryButto[1].Background = Brushes.LawnGreen;
+            categoryButto[1].Background = Brushes.SeaGreen;
+            categoryButto[1].Foreground = Brushes.White;
             categoryButto[1].Click += new RoutedEventHandler(
             (sendItem, args) =>
            {
@@ -181,7 +190,8 @@ namespace SystemRealizacjiZamowien
                onlyInstanceCat.Name = "Categories";
                Hide();
            });
-            categoryButto[2].Background = Brushes.LawnGreen;
+            categoryButto[2].Background = Brushes.SeaGreen;
+            categoryButto[2].Foreground = Brushes.White;
             categoryButto[2].Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
@@ -189,7 +199,8 @@ namespace SystemRealizacjiZamowien
                 onlyInstanceCat.Name = "Categories";
                 Hide();
             });
-            categoryButto[3].Background = Brushes.LawnGreen;
+            categoryButto[3].Background = Brushes.SeaGreen;
+            categoryButto[3].Foreground = Brushes.White;
             categoryButto[3].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
@@ -198,7 +209,8 @@ namespace SystemRealizacjiZamowien
                  Hide();
              });
 
-            categoryButto[4].Background = Brushes.LawnGreen;
+            categoryButto[4].Background = Brushes.SeaGreen;
+            categoryButto[4].Foreground = Brushes.White;
             categoryButto[4].Click += new RoutedEventHandler(
              (sendItem, args) =>
              {
@@ -208,7 +220,7 @@ namespace SystemRealizacjiZamowien
              });
 
 
-            this.Find.Background = Brushes.Aquamarine;
+            this.Find.Background = Brushes.Teal;
             this.Find.Click += new RoutedEventHandler(
             (sendItem, args) =>
             {
@@ -323,9 +335,17 @@ namespace SystemRealizacjiZamowien
             var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
 
             SystemRealizacjiZamowien.Order.totalToPay = 0;
-            SystemRealizacjiZamowien.Order.productNames.RemoveAt(SystemRealizacjiZamowien.Order.productNames.Count - 1);
-            SystemRealizacjiZamowien.Order.amountOfProd.RemoveAt(SystemRealizacjiZamowien.Order.amountOfProd.Count - 1);
-            SystemRealizacjiZamowien.Order.productPrices.RemoveAt(SystemRealizacjiZamowien.Order.productPrices.Count - 1);
+            SystemRealizacjiZamowien.Order.productNames.Clear();
+            SystemRealizacjiZamowien.Order.amountOfProd.Clear();
+            SystemRealizacjiZamowien.Order.productPrices.Clear();
+            SystemRealizacjiZamowien.Order.accounts.Clear();
+
+            //SystemRealizacjiZamowien.Order.productNames.RemoveAt(SystemRealizacjiZamowien.Order.productNames.Count - 1);
+            //SystemRealizacjiZamowien.Order.amountOfProd.RemoveAt(SystemRealizacjiZamowien.Order.amountOfProd.Count - 1);
+            //SystemRealizacjiZamowien.Order.productPrices.RemoveAt(SystemRealizacjiZamowien.Order.productPrices.Count - 1);
+
+
+
             mainWin.CashToPay.Content = "0,00";
             mainWin.CurrentOrder.Content = "";
 

@@ -36,15 +36,26 @@ namespace SystemRealizacjiZamowien
             System.Windows.Controls.Button retBtn = new Button();
             retBtn.Name = "Back";
             retBtn.Content = "Back";
-            retBtn.Background = Brushes.LawnGreen;
+            retBtn.Background = Brushes.SeaGreen;
+            retBtn.Foreground = Brushes.White;
             retBtn.Click += new RoutedEventHandler(
             (sendIte, arg) =>
             {
                 var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
+
+                mainWin.CurrentOrder.Content += "";
                 mainWin.SearchFor.Text = "";
                 mainWin.Show();
                 Close();
-                label.Content = Order.total.ToString();
+
+                if (mainWin.CurrentOrder.Content.ToString() == "")
+                {
+                    label.Content = "0";
+                }
+                else
+                {
+                    label.Content = Order.total.ToString();
+                }
             });
 
             grid.Children.Add(retBtn);
@@ -55,15 +66,17 @@ namespace SystemRealizacjiZamowien
                 int inc = 0;
                 
                 var mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
-                string startsWith = mainWin.SearchFor.Text.ToString();
+                string startsWith = mainWin.SearchFor.Text.ToUpper().ToString();
 
                 for (int j = 0; j <productNames.Count; ++j)
                 {
-                    if (productNames[j].StartsWith(startsWith))
+                    if (productNames[j].ToUpper().Contains(startsWith))
                     {
                         itemButton[] itemButto = new itemButton[productNames.Count];
                         itemButto[i] = new itemButton(productNames[i], productPrices[i], fullname[i]);
                         itemButto[i].Tag = productPrices[i];
+                        itemButto[i].Foreground = Brushes.White;
+                        itemButto[i].Background = new SolidColorBrush(Color.FromArgb(255, 84, 93, 106));
                         grid.Children.Add(itemButto[i]);
                         inc++;
 
@@ -75,6 +88,8 @@ namespace SystemRealizacjiZamowien
                        string productName = (string)(sendIte as itemButton).name;
                        string stringPrice = (string)(sendIte as itemButton).Tag;
                        string fullName = (string)(sendIte as itemButton).fullName;
+
+
 
                         Order.price = Double.Parse(stringPrice);
                         Order.name = productName;
@@ -103,6 +118,8 @@ namespace SystemRealizacjiZamowien
 
                     itemButto[z] = new itemButton(productNames[z], productPrices[z], fullname[z]);
                     itemButto[z].Tag = productPrices[z];
+                    itemButto[z].Foreground = Brushes.White;
+                    itemButto[z].Background = new SolidColorBrush(Color.FromArgb(255, 84, 93, 106));
 
                     itemButto[z].Click += new RoutedEventHandler(
                     (sendIte, arg) =>

@@ -7,24 +7,24 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Wprowadzanie ilości" Height="500" Width="400">
-    <Grid Background="LightGray">
-        <TextBox x:Name="ilosc"  HorizontalAlignment="Center" Height="54" Margin="5,20,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" FontSize="36" TextAlignment="Right"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="165,124,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="271,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="56,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="165,194,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="271,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="56,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="165,265,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="271,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="CE" HorizontalAlignment="Left" Margin="56,338,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFEBEBEB" FontSize="16" Click="Clear_all"/>
-        <Button Content="0" HorizontalAlignment="Left" Margin="165,338,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#FFEBEBEB"/>
-        <Button Content="C" HorizontalAlignment="Left" Margin="271,338,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FFEBEBEB" Click="Clear"/>
-        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="56,396,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFD92222" Click="close" FontSize="16"/>
-        <Button Content="Potwierdź" HorizontalAlignment="Left" Margin="271,396,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF57D922" Click="potwierdz"/>
+    <Grid Background="#2e3137">
+        <TextBox x:Name="ilosc" HorizontalAlignment="Center" Height="54" Margin="5,20,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" FontSize="36" TextAlignment="Right" Background="LightGray"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="165,124,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="271,124,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="56,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="165,194,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="271,194,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="56,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="165,265,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="271,265,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="CE" HorizontalAlignment="Left" Margin="56,338,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#545d6a" Foreground="White" FontSize="16" Click="Clear_all"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="165,338,0,0" VerticalAlignment="Top" Width="80" Height="53" FontSize="20" Click="Cyfra" Background="#545d6a" Foreground="White"/>
+        <Button Content="C" HorizontalAlignment="Left" Margin="271,338,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#545d6a" Foreground="White" Click="Clear"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="56,396,0,0" VerticalAlignment="Top" Width="77" Height="53" Background="#FFFF6347" Foreground="White" Click="close" FontSize="16"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="271,396,0,0" VerticalAlignment="Top" Width="77" Height="53" FontSize="16" Background="#FF008080" Foreground="White" Click="potwierdz"/>
 
-        <Label Name="ProductName" Content="" FontSize="20" Margin="56,60,44,345" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Name="ProductName" Foreground="White" Content="" FontSize="20" Margin="56,60,44,345" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         
     </Grid>
 </Window>

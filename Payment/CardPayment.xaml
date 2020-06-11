@@ -8,14 +8,14 @@
         xmlns:gif ="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
         Icon="/Sources/Main-window-icon.jpg"
     WindowStartupLocation="CenterScreen">
-    <Grid Background="LightGreen">
+    <Grid Background="#2e3137">
         <Line Stretch="Fill" Stroke="Black" X2="1" Margin="0,-200,0,0"/>
-        <Label Name="labelDate" Width="100" Height="25" Margin="-180,-250,0,0"></Label>
-        <Label Name="labelTime" Width="75" Height="25" Margin="200,-250,0,0" HorizontalContentAlignment="Right"></Label>
-        <Label Name="PaymentProcces" Width="250" Height="25" HorizontalContentAlignment="Center" Margin="0,150,0,0" Content="Present the card"></Label>
-        <Label Name="labelCashToPay" Width="200" Height="25" HorizontalContentAlignment="Center" Margin="0,-150,0,0"></Label>
-        <Button Name="goBackButton" Width="70" Height="30" Margin="-175,225,0,0" Content="Back" Click="CloseCashPaymentWindow"/>
-        <Button Name="startPaymentProcedureButton" Width="100" Height="100" Background="Transparent" Click="StartPaymentProcedure">
+        <Label Name="labelDate" Foreground="White" Width="100" Height="25" Margin="-180,-250,0,0"></Label>
+        <Label Name="labelTime" Foreground="White" Width="75" Height="25" Margin="200,-250,0,0" HorizontalContentAlignment="Right"></Label>
+        <Label Name="PaymentProcces" Foreground="White" Width="250" Height="25" HorizontalContentAlignment="Center" Margin="0,150,0,0" Content="Present the card"></Label>
+        <Label Name="labelCashToPay" Foreground="White" Width="200" Height="25" HorizontalContentAlignment="Center" Margin="0,-150,0,0"></Label>
+        <Button Name="goBackButton" Background="#545d6a" Foreground="White" Width="70" Height="30" Margin="-175,225,0,0" Content="Back" Click="CloseCashPaymentWindow"/>
+        <Button Name="startPaymentProcedureButton" Width="100" Height="100" Background="#FF008080" Click="StartPaymentProcedure">
             <Image>
                 <Image.Source>
                     <BitmapImage DecodePixelWidth="300" UriSource="/Sources/credit-card-348720_1280.png"></BitmapImage>

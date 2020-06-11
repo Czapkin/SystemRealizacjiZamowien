@@ -7,6 +7,7 @@ namespace SystemRealizacjiZamowien
 {
     internal class Order
     {
+        public static Dictionary<string, int> accounts = new Dictionary<string, int>();
         public static double price;
         public static double total;
         public static double sub;
@@ -14,6 +15,8 @@ namespace SystemRealizacjiZamowien
         public static List<string> productNames = new List<string>(); 
         public static List<double> productPrices = new List<double>();
         public static List<int> amountOfProd = new List<int>();
+        public static List<double> individualPrice = new List<double>();
+        
         public static string user;
         public static double userMoney;
         public static string name;

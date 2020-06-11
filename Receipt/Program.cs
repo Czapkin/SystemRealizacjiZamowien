@@ -67,7 +67,7 @@ namespace Paragon
 
                 for (int ctr = 0; ctr < Order.productPrices.Count; ctr++)
                 {
-                    sw.WriteLine("{0,-11}\n{1,26:0.00}", Order.productNames[ctr], Order.amountOfProd[ctr] + "x " + Order.productPrices[ctr]/*prices[ctr] * amounts[ctr]*/);
+                    sw.WriteLine("{0,-11}\n{1,26:0.00}", Order.productNames[ctr], Order.amountOfProd[ctr] + "x " + (Order.productPrices[ctr] / Order.amountOfProd[ctr]).ToString()/*prices[ctr] * amounts[ctr]*/);
                 }
 
 
@@ -85,7 +85,7 @@ namespace Paragon
                     sw.WriteLine("{0,-14} {1,11:0.00}", "Płatność kartą", Order.totalToPay);
                 }
                                                                         
-                sw.WriteLine("\n{0,-7} {1,13} {2:D4}", "P.fisk.", "Nr", nr_paragonu);// numer paragonu  !!!!!!!!!!!!!!!!!!!! [ do zrobienia ] !!!!!!!!!!!!!!!!!!!!!!!!
+                sw.WriteLine("\n{0,-7} {1,13} {2:D4}", "P.fisk.", "Nr", nr_paragonu);// numer paragonu  
                 sw.WriteLine("       AFN 12345678");
                 sw.WriteLine("   ZAPRASZAMY PONOWNIE");
                 sw.Close();
